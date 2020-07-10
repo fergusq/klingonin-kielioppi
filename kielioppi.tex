@@ -17,6 +17,7 @@
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{tikz}
 
 \makeindex
 
@@ -65,7 +66,7 @@ Koska vasta opettelen klingonia kirjoittaessani tätä, tekstissä saattaa olla 
 
 \begin{quote}
     Iikka Hauhio \\
-    \textit{Helsingissä kesäkuussa 2020}
+    \textit{Helsingissä heinäkuussa 2020}
 \end{quote}
 
 \chapter{'et mu'}
@@ -82,7 +83,7 @@ net bolu'chugh, HIja'.
 
 \begin{quote}
     'Iyqa' HawHI'o' \\
-    \textit{HelsIngqI'Daq, tera' jar jav, tera' DIS 2020}
+    \textit{HelsIngqI'Daq, tera' jar Hoch, tera' DIS 2020}
 \end{quote}
 
 \tableofcontents
@@ -532,7 +533,7 @@ Persoonan tunnus on verbin etuliite.
     \multirow{2}{*}{HI-} & \multirow{2}{*}{gho-} & - & - & \multirow{2}{*}{yI-} & \multirow{2}{*}{tI-} & yI- & SoH (imp.)\\
     \cline{3-4}
     \cline{7-7}
-    & & - & - & & & pe- & tlhIH ('.)\\
+    & & - & - & & & pe- & tlhIH (imp.)\\
 \end{tabular}
 \index{imperatiivi}
 
@@ -680,6 +681,10 @@ Intransitiivisen verbin subjektista tulee transitiivisen verbin objekti.
 
 \begin{tabular}{l l}
     \textbf{rop} Humanpu' law'. & Monet ihmiset ovat sairaita. \\
+    \begin{tikzpicture}
+        \draw (0, 0);
+        \draw[->] (1.5, 0.5) -- (1, 0);
+    \end{tikzpicture} \\
     Humanpu' law' \textbf{vIropmoH}. & Sairastutin monia ihmisiä. \\
 \end{tabular}
 
@@ -697,7 +702,23 @@ Alkuperäisen verbin objekti säilyy uuden verbin objektina ja alkuperäisen ver
 
 \begin{tabular}{l l}
     mI'QeD \textbf{ghojtaH} puq. & Lapsi oppii matematiikkaa. \\
+    \begin{tikzpicture}
+        \draw (0, 0);
+        \draw[->] (2.75, 1) -- (0.6, 0);
+        \draw[->] (0.5, 1) -- (1.5, 0);
+    \end{tikzpicture} \\
     puqvaD mI'QeD \textbf{vIghojmoHtaH}. & Opetan matematiikkaa lapselle. \\
+\end{tabular}
+
+Jos transitiivisella verbillä on refleksiivipääte, se käyttäytyy kuitenkin samoin, kuin intransitiiviset verbit.
+
+\begin{tabular}{l l}
+    \textbf{chopchuq} jaghpu'. & Viholliset purivat toisiaan. \\
+    \begin{tikzpicture}
+        \draw (0, 0);
+        \draw[->] (1.75, 0.5) -- (0.5, 0);
+    \end{tikzpicture} \\
+    jaghpu' \textbf{chopchuqmoH} QeH. & Viha sai viholliset puremaan toisiaan. \\
 \end{tabular}
 
 \section{Passiivisuus}\label{sec:passiivi}
@@ -711,7 +732,7 @@ Verbin persoonapääte valitaan kuin objekti olisi subjekti, mutta objekti kirjo
 
 \begin{tabular}{l l}
     \textbf{jIqawlu'taH}. & Minut muistetaan. \\
-    vay' Daja'chugh, \textbf{bIHoHlu'}. & Jos kerrot jklle, sinut tapetaan. \\
+    vay' Daja'chugh, \textbf{bIHoHlu'}. & Jos kerrot jollekulle, sinut tapetaan. \\
     roD juHwIj \textbf{Say'moHlu'}. & Kotini siivotaan säännöllisesti. \\
 \end{tabular}
 
@@ -1112,14 +1133,16 @@ Kuten persoonapronominitkin, interrogatiivipronominit voivat toimia verbinä ja 
 \index{kvanttoripronomini}
 \index{pagh}
 \index{vay'}
+\index{'op}
 \index{Hoch}
 
 Klingonissa on seuraavat kvanttoripronominit:
 
-\begin{tabular}{Bl Il}
-    pagh & ei kukaan, ei mikään \\
-    vay' & joku, jokin \\
-    Hoch & jokainen, kaikki \\
+\begin{tabular}{Bl l}
+    pagh & \textit{ei kukaan, ei mikään} \\
+    vay' & \textit{joku, jokin} \\
+    'op & (laskettaville sanoille:) \textit{jotkut}; (ainesanoille:) \textit{vähän, jonkin verran} \\
+    Hoch & \textit{jokainen, kaikki} \\
 \end{tabular}
 
 Esimerkiksi:
@@ -1130,11 +1153,13 @@ Esimerkiksi:
     ru' \textbf{Hoch}. & Kaikki on väliaikaista. \\
 \end{tabular}
 
-\textbf{pagh} ja \textbf{Hoch} voivat toimia substantiivin määreinä.
+\textbf{pagh} ja \textbf{Hoch} voivat toimia substantiivin määreinä. \textbf{'op} esiintyy vain substantiivin määreenä.
 
 \begin{tabular}{l l}
     'oH Sov \textbf{Hoch} tlhIngan. & Sen tietää jokainen klingoni. \\
     mutlhej \textbf{pagh} jatlhwI'. & Minulla ei ole ketään kelle puhua. \\
+    \textbf{'op} HIq vItlhutlh neH! & Minä vain join vähän viiniä! \\
+    mupar \textbf{'op} Qel. & Jotkut lääkärit vihaavat minua. \\
 \end{tabular}
 
 \subsection{Pronomini latlh}
