@@ -1,10 +1,17 @@
 \documentclass{book}
 
+\usepackage{iftex}
+
+\ifxetex
 \usepackage{fontspec}
+\usepackage{ebgaramond}
+\else
+\usepackage{alternative4ht}
+\altusepackage{fontspec}
+\fi
 %\newfontfamily\pIqaD{pIqaD-qolqoS.ttf}
 \newfontface  \pIqaD{pIqaD-qolqoS.ttf}
 %\setmainfont[Ligatures=TeX]{ebgaramond}
-\usepackage{ebgaramond}
 
 %\usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
@@ -13,13 +20,14 @@
 \usepackage{dcolumn}
 \usepackage{multirow}
 \usepackage{amssymb}
-\usepackage{makeidx}
+\usepackage[xindy]{imakeidx}
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{tikz}
 
-\makeindex
+\makeindex[title=Käsitteiden hakemisto]
+\makeindex[name=sanat,title=Klingonin sanojen hakemisto]
 
 \title{{\pIqaD   }\\Klingonin kielioppi}
 \author{Iikka Hauhio}
@@ -114,6 +122,7 @@ tera'ngan & maan asukas \\
 tlhIngan & klingoni \\
 SuvwI' & soturi \\
 ghojmoHwI' & opettaja \\
+ghu & vauva \\
 \end{tabular}
 
 \subsection{Ruumiinosat}
@@ -154,12 +163,12 @@ omistusliite tai demonstratiiviliite & -lIj \\
 sijapääte & -mo' \\
 \end{tabular}
 
-\textbf{DujHeyqoqmeylIjmo'} \textit{Sinun niin kutsuttujen pikku alustesi vuoksi}
+\textbf{DujHomqoqmeylIjmo'} \textit{Sinun niin kutsuttujen pikku alustesi vuoksi}
 
 \section{Johdinliitteet}
-\index{-'a'}
-\index{-Hom}
-\index{-oy}
+\index[sanat]{-'a'}
+\index[sanat]{-Hom}
+\index[sanat]{-oy}
 
 \begin{tabular}{l Bl | Bl Il}
     augmentatiivi & -'a' & veS'a' & suuri sota \\
@@ -171,9 +180,9 @@ sijapääte & -mo' \\
 
 \section{Täsmennysliitteet}
 \index{täsmennysliitteet}
-\index{-qoq}
-\index{-Hey}
-\index{-na'}
+\index[sanat]{-qoq}
+\index[sanat]{-Hey}
+\index[sanat]{-na'}
 
 Täsmennysliiteellä voi ilmaista, kuinka sopiva käytetty sana puhujan mielestä on.\\*[1em]
 \begin{tabular}{Bl l}
@@ -191,9 +200,9 @@ Esimerkiksi:\\*[1em]
 
 \section{Monikko}
 \index{monikko}
-\index{-pu'}
-\index{-Du'}
-\index{-mey}
+\index[sanat]{-pu'}
+\index[sanat]{-Du'}
+\index[sanat]{-mey}
 
 Monikon tunnus riippuu suvusta.
 Lisäksi joillakin ainesanoilla ei ole monikkomuotoa (kuten \textbf{'Iw} \textit{veri})
@@ -213,14 +222,14 @@ Jos \textbf{-mey}-liitettä käyttää henkilöiden, ruumiinosien tai epäsään
 
 \section{Omistusliitteet}
 \index{omistusliite}
-\index{-wI'}
-\index{-wIj}
-\index{-ma', -maj}
-\index{-lI'}
-\index{-lIj}
-\index{-ra', -raj}
-\index{-Daj}
-\index{-chaj}
+\index[sanat]{-wI'}
+\index[sanat]{-wIj}
+\index[sanat]{-ma', -maj}
+\index[sanat]{-lI'}
+\index[sanat]{-lIj}
+\index[sanat]{-ra', -raj}
+\index[sanat]{-Daj}
+\index[sanat]{-chaj}
 
 Omistusliitteet riippuvat monikon tunnuksen tavoin omistettavan asian suvusta.\\*[1em]
 \begin{tabular}{l Bc Bc}
@@ -244,8 +253,8 @@ juHDaj & (hänen) kotinsa \\
 
 \section{Demonstratiiviliitteet}
 \index{demonstratiiviliite}
-\index{-vam}
-\index{-vetlh}
+\index[sanat]{-vam}
+\index[sanat]{-vetlh}
 
 Demonstratiiviliitteet osoittavat mistä tai kenestä on kysymys.
 Klingon kielessä on kaksi demonstratiiviliitettä:\\*[1em]
@@ -299,7 +308,7 @@ Nominatiivia käytetään
     Dun \textbf{tlhIngan} wo'. & Klingon-valtakunta on suuremmoinen. \\
 \end{tabular}
 
-4. eräissä sanaliitoissa\\*[1em]
+4. sanaliitoissa\\*[1em]
 \begin{tabular}{l Il}
     \textbf{ropyaH} qach & sairaala \\
     \textbf{QIn} 'echletHom & postikortti \\
@@ -311,9 +320,19 @@ Nominatiivia käytetään
     \textbf{raS} bIngDaq 'oH tu'lu'. & Se on pöydän alla. \\
 \end{tabular}
 
+6. ilmaisemaan lauseen tapahtuma-aikaa\\*[1em]
+\begin{tabular}{l l}
+    \textbf{DaHjaj ram} vIQonglaHbe'. & En voi nukkua tänä yönä. \\
+\end{tabular}
+
+Jos ajanmääre kertoo tapahtuman keston, käytetään verbiä \textbf{qaStaHvIS} \textit{aikana}:\\*[1em]
+\begin{tabular}{l l}
+    \textbf{qaStaHvIS cha' rep} vIQongpu'. & Nukuin kaksi tuntia. \\
+\end{tabular}
+
 \subsection{Lokatiivi}
 \index{lokatiivi}
-\index{-Daq}
+\index[sanat]{-Daq}
 
 Lokatiivia käytetään ilmaisemaan
 
@@ -331,18 +350,19 @@ Lokatiivia käytetään ilmaisemaan
 
 \subsection{Elatiivi}
 \index{elatiivi}
-\index{-vo'}
+\index[sanat]{-vo'}
 
 Elatiivi ilmaisee lähtöpaikkaa.\\*[1em]
 \begin{tabular}{l l}
-    \textbf{yuQvamvo'} jIleng 'e' vIneH. & Haluan matkustaa pois tältä \\
+    \textbf{yuQvamvo'} jIleng vIneH. & Haluan matkustaa pois tältä \\
     & planeetalta. \\
     \textbf{nachlIjvo'} mIv yItuQHa'moH! & Riisu kypärä päästäsi! \\
+    \textbf{naDevvo'} bIQ'a' DaleghlaH. & Voit nähdä täältä meren. \\
 \end{tabular}
 
 \subsection{Datiivi}
 \index{datiivi}
-\index{-vaD}
+\index[sanat]{-vaD}
 
 Datiivia käytetään
 
@@ -353,7 +373,7 @@ Datiivia käytetään
 \end{tabular}
 
 2. ilmaisemaan -moH-verbin kokijaa
-\index{-moH}\\*[1em]
+\index[sanat]{-moH}\\*[1em]
 \begin{tabular}{l l}
     \textbf{ghaHvaD} quHDaj qawmoH. & Se muistuttaa häntä perinnöstään. \\
 \end{tabular}
@@ -365,7 +385,7 @@ Datiivia käytetään
 
 \subsection{Kausatiivi}
 \index{kausatiivi}
-\index{-mo'}
+\index[sanat]{-mo'}
 
 Kausatiivia käytetään ilmaisemaan syytä\\*[1em]
 \begin{tabular}{l l}
@@ -373,7 +393,7 @@ Kausatiivia käytetään ilmaisemaan syytä\\*[1em]
 \end{tabular}
 
 \subsection{-'e'}
-\index{-'e'}
+\index[sanat]{-'e'}
 
 -'e'-sijamuotoa käytetään
 
@@ -409,8 +429,8 @@ Kausatiivia käytetään ilmaisemaan syytä\\*[1em]
 \index{postpositio}
 
 Klingonin postpositiot ilmaisevat paikkaa ja taipuvat paikallissijoissa (\textbf{-Daq}, \textbf{-vo'}).
-\index{-vo'}
-\index{-Daq}\\*[1em]
+\index[sanat]{-vo'}
+\index[sanat]{-Daq}\\*[1em]
 \begin{tabular}{Bl Il | Bl l}
     Dung & yläpuoli & qach DungDaq & rakennuksen yllä/ylle \\
     bIng & alapuoli & raS bIngDaq & pöydän alla/alle \\
@@ -448,7 +468,7 @@ Adjektiiviset verbit vastaavat muiden kielten adjektiiveja.
 \end{tabular}
 
 Adjektiivinen verbiä voidaan käyttää attribuuttina pääsanansa jälkeen.
-Tällöin verbillä voi olla vain päätteet \textbf{-Ha'}, \textbf{-be'} ja \textbf{-qu'}. [Onko varmasti näin?]\\*[1em]
+Tällöin verbillä voi olla vain päätteet \textbf{-Ha'}, \textbf{-be'} ja \textbf{-qu'}.\\*[1em]
 \begin{tabular}{l l}
     roj \textbf{ru'} wIneH. & Haluamme väliaikaisen rauhan. \\
     Duj \textbf{tIn} vIghaj. & Minulla on iso alus. \\
@@ -459,11 +479,11 @@ Tällöin verbillä voi olla vain päätteet \textbf{-Ha'}, \textbf{-be'} ja \te
 Substantiivin sijamuoto liitetään viimeiseen adjektiiviattribuuttiin, jos sellaisia on.\\*[1em]
 \begin{tabular}{l l}
     ghunwI'pu' \textbf{machvaD} & Opetan kielitiedettä \\
-    HolQeD vIghoHmoH. & pienille ohjelmoijille. \\ 
+    HolQeD vIghojmoH. & pienille ohjelmoijille. \\ 
 \end{tabular}
 
 \section{-Ha'-johdin}
-\index{-Ha'}
+\index[sanat]{-Ha'}
 
 \textbf{-Ha'}-johdin muuttaa verbin merkityksen usein vastakohtaiseksi.
 Se liitetään aina verbin juureen.\\*[1em]
@@ -513,10 +533,10 @@ Persoonan tunnus on verbin etuliite.\\*[1em]
 \index{imperatiivi}
 
 Refleksiivipäätteen \textbf{-'egh} kanssa käytetään objektitonta persoonaliitettä.
-\index{-'egh}
+\index[sanat]{-'egh}
 
 Passiivirakenteessa käytetään \textbf{-lu'}-päätettä ja persoonapääte valitaan siten, että päätteen objekti on yksikön 3. persoona ja subjekti on lauseen objektin persoona. Katso osio~\ref{sec:passiivi}.
-\index{-lu'}\\*[1em]
+\index[sanat]{-lu'}\\*[1em]
 \begin{tabular}{l l}
     \textbf{jISop}. & Minä syön. \\
     Soj \textbf{vISoptaH}. & Minä syön ruokaa. \\
@@ -529,7 +549,7 @@ Passiivirakenteessa käytetään \textbf{-lu'}-päätettä ja persoonapääte va
 \end{tabular}
 
 Poikkeuksellisesti verbi \textbf{tu'lu'} ei tarvitse persoonaliitettä.
-\index{tu'lu'}\\*[1em]
+\index[sanat]{tu'lu'}\\*[1em]
 \begin{tabular}{l l}
     yotlhDaq puqpu' \textbf{tu'lu' / lutu'lu'}. & Puistossa on lapsia. \\
 \end{tabular}
@@ -566,8 +586,8 @@ Klingonissa on kaksi refleksiivipäätettä:\\*[1em]
     -'egh & itseään \\
     -chuq & toisiaan \\
 \end{tabular}
-\index{-'egh}
-\index{-chuq}
+\index[sanat]{-'egh}
+\index[sanat]{-chuq}
 
 Refleksiivisellä verbillä ei ole objektia.\\*[1em]
 \begin{tabular}{l l}
@@ -587,11 +607,11 @@ Modaalipäätteillä ilmaistaan subjektin valmiutta tai tarvetta tehdä asia.\\*
     -beH & valmis (asiasta) & -beHbe' & ei valmis \\
     -vIp & pelokas & -vIpbe' & peloton \\
 \end{tabular}
-\index{-nIS}
-\index{-qang}
-\index{-rup}
-\index{-beH}
-\index{-vIp}\\*[1em]
+\index[sanat]{-nIS}
+\index[sanat]{-qang}
+\index[sanat]{-rup}
+\index[sanat]{-beH}
+\index[sanat]{-vIp}\\*[1em]
 \begin{tabular}{l l}
     Soj \textbf{vIghunnISmoH}. & Minun on lämmitettävä ruoka. \\
     DaH \textbf{jISopnISbe'}. & Minun ei tarvitse syödä nyt. \\
@@ -608,8 +628,8 @@ Muutospäätteet \textbf{-choH} ja \textbf{-qa'} ilmaisevat muutosta tilassa.\\*
     -choH & muuttua jonkinlaiseksi, alkaa tehdä \\
     -qa' & uudestaan \\
 \end{tabular}
-\index{-choH}
-\index{-qa'}
+\index[sanat]{-choH}
+\index[sanat]{-qa'}
 
 Lisättynä adjektiiviseen verbiin \textbf{-choH} tarkoittaa \textit{muuttua jonkinlaiseksi}:\\*[1em]
 \begin{tabular}{Bl Il | Bl Il}
@@ -631,7 +651,7 @@ Muihin verbeihin lisättynä \textbf{-choH} tarkoittaa \textit{alkaa tehdä}:\\*
 \end{tabular}
 
 \section{Kausaalijohdin -moH}
-\index{-moH}
+\index[sanat]{-moH}
 \index{kausaali}
 
 1. Liitettynä intransitiiviseen verbiin kausaalipääte \textbf{-moH} muuttaa verbin transitiiviseksi.
@@ -648,13 +668,20 @@ Muihin verbeihin lisättynä \textbf{-choH} tarkoittaa \textit{alkaa tehdä}:\\*
 
 Intransitiivisen verbin subjektista tulee transitiivisen verbin objekti.
 
-\begin{tikzpicture}
-    \node[anchor=west] at (0, 1) {\textbf{rop} Humanpu' law'.};
-    \node[anchor=west] at (4.5, 1) {Monet ihmiset ovat sairaita.};
-    \draw[->] (1.5, 0.7) -- (1, 0.3);
-    \node[anchor=west]  at (0, 0) {Humanpu' law' \textbf{vIropmoH}.};
-    \node[anchor=west]  at (4.5, 0) {Sairastutin monia ihmisiä.};
-\end{tikzpicture}
+\ifxetex
+    \begin{tikzpicture}
+        \node[anchor=west] at (0, 1) {\textbf{rop} Humanpu' law'.};
+        \node[anchor=west] at (4.5, 1) {Monet ihmiset ovat sairaita.};
+        \draw[->] (1.5, 0.7) -- (1, 0.3);
+        \node[anchor=west]  at (0, 0) {Humanpu' law' \textbf{vIropmoH}.};
+        \node[anchor=west]  at (4.5, 0) {Sairastutin monia ihmisiä.};
+    \end{tikzpicture}
+\else
+    \begin{tabular}{l l}
+        \textbf{rop} Humanpu' law'. & Monet ihmiset ovat sairaita. \\
+        Humanpu' law' \textbf{vIropmoH}. & Sairastutin monia ihmisiä. \\
+    \end{tabular}
+\fi
 
 2. Liitettynä transitiiviseen verbiin \textbf{-moH} merkitsee ''saada joku tekemään''.\\*[1em]
 \begin{tabular}{Bl Il | Bl Il}
@@ -667,28 +694,42 @@ Intransitiivisen verbin subjektista tulee transitiivisen verbin objekti.
 
 Alkuperäisen verbin objekti säilyy uuden verbin objektina ja alkuperäisen verbin subjektista tulee uuden verbin epäsuora objekti.
 
-\begin{tikzpicture}
-    \node[anchor=west] at (0, 1.5) {mI'QeD \textbf{ghojtaH} puq.};
-    \node[anchor=west] at (5, 1.5) {Lapsi oppii matematiikkaa.};
-    \draw[->] (2.75, 1.2) -- (0.7, 0.3);
-    \draw[->] (0.7, 1.2) -- (1.7, 0.3);
-    \node[anchor=west]  at (0, 0) {puqvaD mI'QeD \textbf{vIghojmoHtaH}.};
-    \node[anchor=west]  at (5, 0) {Opetan matematiikkaa lapselle.};
-\end{tikzpicture}
+\ifxetex
+    \begin{tikzpicture}
+        \node[anchor=west] at (0, 1.5) {mI'QeD \textbf{ghojtaH} puq.};
+        \node[anchor=west] at (5, 1.5) {Lapsi oppii matematiikkaa.};
+        \draw[->] (2.75, 1.2) -- (0.7, 0.3);
+        \draw[->] (0.7, 1.2) -- (1.7, 0.3);
+        \node[anchor=west]  at (0, 0) {puqvaD mI'QeD \textbf{vIghojmoHtaH}.};
+        \node[anchor=west]  at (5, 0) {Opetan matematiikkaa lapselle.};
+    \end{tikzpicture}
+\else
+    \begin{tabular}{l l}
+        mI'QeD \textbf{ghojtaH} puq. & Lapsi oppii matematiikkaa. \\
+        puqvaD mI'QeD \textbf{vIghojmoHtaH}. & Opetan matematiikkaa lapselle. \\
+    \end{tabular}
+\fi
 
 Jos transitiivisella verbillä on refleksiivipääte, se käyttäytyy kuitenkin samoin, kuin intransitiiviset verbit.
 
-\begin{tikzpicture}
-    \node[anchor=west] at (0, 1) {\textbf{chopchuq} jaghpu'.};
-    \node[anchor=west] at (4.5, 1) {Viholliset purivat toisiaan.};
-    \draw[->] (1.9, 0.7) -- (0.8, 0.3);
-    \node[anchor=west]  at (0, 0) {jaghpu' \textbf{chopchuqmoH} QeH.};
-    \node[anchor=west]  at (4.5, 0) {Viha sai viholliset puremaan toisiaan.};
-\end{tikzpicture}
+\ifxetex
+    \begin{tikzpicture}
+        \node[anchor=west] at (0, 1) {\textbf{chopchuq} jaghpu'.};
+        \node[anchor=west] at (4.5, 1) {Viholliset purivat toisiaan.};
+        \draw[->] (1.9, 0.7) -- (0.8, 0.3);
+        \node[anchor=west]  at (0, 0) {jaghpu' \textbf{chopchuqmoH} QeH.};
+        \node[anchor=west]  at (4.5, 0) {Viha sai viholliset puremaan toisiaan.};
+    \end{tikzpicture}
+\else
+    \begin{tabular}{l l}
+        \textbf{chopchuq} jaghpu'. & Viholliset purivat toisiaan. \\
+        jaghpu' \textbf{chopchuqmoH} QeH. & Viha sai viholliset puremaan toisiaan. \\
+    \end{tabular}
+\fi
 
 \section{Passiivisuus}\label{sec:passiivi}
 \index{passiivi}
-\index{-lu'}
+\index[sanat]{-lu'}
 
 Passiivin tunnus \textbf{-lu'} merkitsee epämääräistä subjektia.
 Verbin persoonapääte valitaan kuin objekti olisi subjekti, mutta objekti kirjoitetaan kuintenkin tavanomaisesti ennen predikaattia.
@@ -701,7 +742,7 @@ Verbin persoonapääte valitaan kuin objekti olisi subjekti, mutta objekti kirjo
 \end{tabular}
 
 Passiivisessa verbissä ei voi käyttää \textbf{-laH}-päätettä.
-\index{-laH}
+\index[sanat]{-laH}
 
 Passiivi voi vastata suomen nollapersoonarakennetta, eli jokaisen peräkkäisen passiivisen verbin määrittelemätön tekijä on sama.\\*[1em]
 \begin{tabular}{l}
@@ -713,7 +754,7 @@ Passiivi voi vastata suomen nollapersoonarakennetta, eli jokaisen peräkkäisen 
 \end{tabular}
 
 \textbf{tu'}-verbin passiivilla on merkitys \textit{olla jossain}:
-\index{tu'lu'}\\*[1em]
+\index[sanat]{tu'lu'}\\*[1em]
 \begin{tabular}{l l}
     raS DungDaq QIn \textbf{tu'lu'}. & Viesti on pöydän päällä. \\
     DeSwarDaq Sut \textbf{tu'lu'be'}. & Kaapissa ei ole vaatteita. \\
@@ -721,7 +762,7 @@ Passiivi voi vastata suomen nollapersoonarakennetta, eli jokaisen peräkkäisen 
 
 \section{-laH-pääte}
 \label{sec:laH}
-\index{-laH}
+\index[sanat]{-laH}
 
 Modaalinen pääte \textbf{-laH} muuttaa verbin merkitykseksi \textit{voida, osata}.
 Se on päätteiden järjestyksessä eri kohdassa kuin muut modaalipäätteet ja sitä ei voi käyttää passiivisissa verbeissä.\\*[1em]
@@ -748,7 +789,7 @@ Täsmennyspäätteillä ilmaistaan kuinka varma puhuja on ja kuinka selvä kuvat
     -law' & ilmeisesti & -law'be' & en usko \\
 \end{tabular}
 
-\index{-chu'}
+\index[sanat]{-chu'}
 \textbf{-chu'} merkitsee, että toiminto suoritetaan täydellisesti, virheettä, oikein, täysin tai loppuun asti. Tarkka merkitys riippuu verbistä.\\*[1em]
 \begin{tabular}{Bl Il | Bl Il}
     lol & olla ilmassa & lolchu' & olla oikealla korkeudella \\
@@ -758,14 +799,14 @@ Täsmennyspäätteillä ilmaistaan kuinka varma puhuja on ja kuinka selvä kuvat
     HeD & vetäytyä & HeDchu' & vetäytyä kokonaan \\
 \end{tabular}
 
-\index{-bej}
+\index[sanat]{-bej}
 \textbf{-bej} merkitsee, että lause on kiistattomasti tosi.\\*[1em]
 \begin{tabular}{l l}
     \textbf{SuropchoHbej}. & Te sairastutte varmasti. \\
     \textbf{bIlughbejbe'}. & En ole varma, oletko oikeassa. \\
 \end{tabular}
 
-\index{-ba'}
+\index[sanat]{-ba'}
 \textbf{-ba'} merkitsee, että lauseen uskotaan olevan selvästi tosi, mutta se ei ole yhtä kiistatonta kuin \textbf{-bej}-päätteen kanssa.\\*[1em]
 \begin{tabular}{l l}
     \textbf{ropba'} ghaH. & Hän on selvästi sairas. \\
@@ -773,7 +814,7 @@ Täsmennyspäätteillä ilmaistaan kuinka varma puhuja on ja kuinka selvä kuvat
     \textbf{bIlughbe'ba'}. & Olet selvästi väärässä. \\
 \end{tabular}
 
-\index{-law'}
+\index[sanat]{-law'}
 \textbf{-law'} merkitsee \textit{uskoa, luulla}:\\*[1em]
 \begin{tabular}{l l}
     \textbf{yIropqa'law'}. & Taidan sairastua uudestaan. \\
@@ -783,23 +824,22 @@ Täsmennyspäätteillä ilmaistaan kuinka varma puhuja on ja kuinka selvä kuvat
 \end{tabular}
 
 \section{Aspekti}
-
-Verbin aspekti ja teelisyys voidaan ilmaista tarvittaessa seuraavilla päätteillä:
 \index{aspekti}
-\index{teelisyys}\\*[1em]
-\begin{tabular}{l l l}
-    & \multicolumn{2}{c}{aspekti} \\
-    & imperfektiivinen & perfektiivinen \\
-    yleinen & \textbf{-taH} & \textbf{-pu'} \\
-    teelinen & \textbf{-lI'} & \textbf{-ta'} \\
+
+Verbin aspekti voidaan ilmaista tarvittaessa seuraavilla päätteillä:\\*[1em]
+\begin{tabular}{l Bl l}
+    \multirow{2}{*}{imperfektiivinen} & -taH & imperfektiivi \\
+    & -lI' & progressiivi \\
+    \hline
+    \multirow{2}{*}{perfektiivinen} & -pu' & perfektiivi \\
+    & -ta' & intentionaali \\
 \end{tabular}
-\index{-taH}
-\index{-lI'}
-\index{-pu'}
-\index{-ta'}
+\index[sanat]{-taH}
+\index[sanat]{-lI'}
+\index[sanat]{-pu'}
+\index[sanat]{-ta'}
 \index{imperfektiivisyys}
 \index{perfektiivisyys}
-\index{teelisyys}
 
 Imperfektiivisyydellä ilmaistaan, että toiminta on jatkuvaa ja päättymätöntä. 
 Perfektiivinen toiminta taas on päättynyt.
@@ -807,16 +847,17 @@ Toisin kuin suomen kielen perfektiivinen aspekti, klingonin perfektiivinen aspek
 Valmista tai loppuun asti vietyä toimintaa ilmaistaan \textbf{-chu'}-päätteellä (ks.~\ref{sec:tasmennys}) tai \textbf{rIntaH}-apuverbillä (ks.~\ref{subsec:rintah}).
 Aspektia ei tule sekoittaa aikamuotoihin, joita ei ole klingonissa.
 
-Teelisyydellä ilmaistaan, onko toiminnalla tarkoitusta tai määränpäätä.
-Pääte \textbf{-lI'} merkitsee, että toiminnalla on määränpää tai tavoite (toiminnan ei tarvitse kuitenkaan olla tahallista).
-Pääte \textbf{-ta'} merkitsee, että toiminta on tahallista.
-On aina sallittua käyttää teelisten päätteiden sijasta yleisiä päätteitä.\\*[1em]
+Progressiivinen pääte \textbf{-lI'} merkitsee, että toiminnalla on määränpää tai tavoite (toiminnan ei tarvitse kuitenkaan olla tahallista).
+Intentionaalinen pääte \textbf{-ta'} merkitsee, että toiminta on tahallista.
+On aina sallittua käyttää näiden päätteiden sijasta vastaavia päätteitä \textbf{-taH} ja \textbf{-pu'}.\\*[1em]
 \begin{tabular}{l l}
     \textbf{jISoptaHvIS} yISujQo'. & Älä häiritse minua, kun syön. \\
     \textbf{HeghlI'} ghaH. & Hän on kuolemassa. \\
     qatlh \textbf{DaHoHpu'}? & Miksi tapoit hänet? \\
     \textbf{vIghorta'}. & Rikoin sen tarkoituksella. \\
 \end{tabular}
+\index{progressiivi}
+\index{intentionaali}
 
 \section{-neS-pääte}
 
@@ -833,8 +874,8 @@ Seikkalijat muuttavat niitä edeltävän morfeemin merkitystä.
     -qu' & erittäin \\
     -be' & ei \\
 \end{tabular}
-\index{-qu'}
-\index{-be'}
+\index[sanat]{-qu'}
+\index[sanat]{-be'}
 
 Modaalipäätteitä ja täsmennyspäätteitä käsittelevissä luvuissa \ref{sec:modaali}, \ref{sec:laH} ja \ref{sec:tasmennys} on selitetty \textbf{-be'}-päätteen vaikutus näihin päätteisiin.
 Muussa tapauksessa \textbf{-be'} kiinnitetään yleensä joko verbin juureen, \textbf{-Ha'}-, \textbf{-choH}-, \textbf{-qa'}-, \textbf{-moH}-, \textbf{-lu'}-päätteeseen tai aspektin päätteeseen riippuen siitä, mikä näistä on viimeinen.
@@ -849,7 +890,7 @@ Jos lauseessa on kielteinen sana, kuten \textbf{pagh}, \textbf{not} tai \textbf{
 \end{tabular}
 
 \section{-Qo'-pääte}
-\index{-Qo'}
+\index[sanat]{-Qo'}
 
 1. \textbf{-Qo'}-päätteellä ilmaistaan kieltäytymistä.\\*[1em]
 \begin{tabular}{l l}
@@ -877,7 +918,7 @@ Jussiivin tunnus \textbf{-jaj} ilmaisee toivetta tai kehoitusta.\\*[1em]
 
 Interrogatiivi eli kysymysmuoto muuttaa lauseen kysymykseksi.
 Interrogatiivin tunnus on \textbf{-'a'}.
-\index{-'a'}\\*[1em]
+\index[sanat]{-'a'}\\*[1em]
 \begin{tabular}{l l}
     nIm Datlhutlh\textbf{'a'}? & Juotko maitoa? \\
     tlhIngan Hol Dajatlh\textbf{'a'}? & Puhutko klingonia? \\
@@ -904,12 +945,12 @@ Konjunktiopäätteet kiinnitetään sivulauseen predikaattiin.\\*[1em]
     -mo' & koska \\
     -meH & jotta \\
 \end{tabular}
-\index{-vIS}
-\index{-DI'}
-\index{-pa'}
-\index{-chugh}
-\index{-mo'}
-\index{-meH}
+\index[sanat]{-vIS}
+\index[sanat]{-DI'}
+\index[sanat]{-pa'}
+\index[sanat]{-chugh}
+\index[sanat]{-mo'}
+\index[sanat]{-meH}
 
 \textbf{-vIS}-päätteen kanssa on käytettävä imperfektiivistä aspektia (\textbf{-taH}, \textbf{-lI'}).\\*[1em]
 \begin{tabular}{l l}
@@ -940,7 +981,7 @@ Konjunktiopäätteet kiinnitetään sivulauseen predikaattiin.\\*[1em]
 
 Partisiippi muodostetaan verbistä \textbf{-bogh}-päätteellä.
 Partisiippi ei ole adjektiivi, vaan se sijoitetaan joko ennen tai jälkeen pääsanaansa riippuen siitä, onko pääsana verbin subjekti vai objekti.
-\index{-bogh}
+\index[sanat]{-bogh}
 
 Aktiivin partisiippi sijoitetaan ennen pääsanaansa.
 Tällöin pääsana on partisiipin subjekti.
@@ -963,7 +1004,7 @@ Jos taas pääsana on partisiipin subjekti, se voi olla \textbf{-'e'}-sijassa.\\
 
 \textbf{-wI'}-johdin vastaa suomen \textit{-ja}-johdinta.
 Se muuttaa verbin subjektia vastaavaksi substantiiviksi.
-\index{-wI'}\\*[1em]
+\index[sanat]{-wI'}\\*[1em]
 \begin{tabular}{Bl Il | Bl Il}
     ghoj & oppia & ghojwI' & oppilas \\
     ghojmoH & opettaa & ghojmoHwI' & opettaja \\
@@ -974,7 +1015,7 @@ Se muuttaa verbin subjektia vastaavaksi substantiiviksi.
 \end{tabular}
 
 \textbf{-ghach}-johdin muuttaa verbin abstraktiksi substantiiviksi.
-\index{-ghach}\\*[1em]
+\index[sanat]{-ghach}\\*[1em]
 \begin{tabular}{Bl Il | Bl Il}
     lo'laH & voida käyttää & lo'laHghach & arvo \\
     quvHa' & olla häpäisty & quvHa'ghach & häpeä \\
@@ -1002,7 +1043,7 @@ Se muuttaa verbin subjektia vastaavaksi substantiiviksi.
 \section{Apuverbit}
 
 \subsection{neH}
-\index{neH}
+\index[sanat]{neH}
 
 Apuverbin \textbf{neH} \textit{haluta} kanssa ei käytetä relatiivipronominia \textbf{'e'}. \\*[1em]
 \begin{tabular}{l l}
@@ -1010,7 +1051,7 @@ Apuverbin \textbf{neH} \textit{haluta} kanssa ei käytetä relatiivipronominia \
 \end{tabular}
 
 \subsection{qa'}
-\index{qa'}
+\index[sanat]{qa'}
 
 Apuverbiä \textbf{qa'} \textit{korvata} käytetään \textit{jonkin sijasta} -rakenteessa. Relatiivipronomini \textbf{'e'} on valinnainen.\\*[1em]
 \begin{tabular}{l l}
@@ -1020,7 +1061,7 @@ Apuverbiä \textbf{qa'} \textit{korvata} käytetään \textit{jonkin sijasta} -r
 
 \subsection{rIntaH}
 \label{subsec:rintah}
-\index{rIntaH}
+\index[sanat]{rIntaH}
 
 Apuverbi \textbf{rIntaH} merkitsee, että jokin on tapahtunut, lopullinen. Se on taipumaton.\\*[1em]
 \begin{tabular}{l l}
@@ -1029,7 +1070,7 @@ Apuverbi \textbf{rIntaH} merkitsee, että jokin on tapahtunut, lopullinen. Se on
 \end{tabular}
 
 \subsection{jalchugh}
-\index{jalchugh}
+\index[sanat]{jalchugh}
 
 Rakenne \textbf{net jalchugh} \textit{jos kuvitellaan, että} vastaa suomen konditionaalia.\\*[1em]
 \begin{tabular}{l l}
@@ -1041,14 +1082,14 @@ Rakenne \textbf{net jalchugh} \textit{jos kuvitellaan, että} vastaa suomen kond
 
 \section{Persoonapronominit}
 \index{persoonapronomini}
-\index{jIH}
-\index{maH}
-\index{SoH}
-\index{tlhIH}
-\index{ghaH}
-\index{chaH}
-\index{'oH}
-\index{bIH}
+\index[sanat]{jIH}
+\index[sanat]{maH}
+\index[sanat]{SoH}
+\index[sanat]{tlhIH}
+\index[sanat]{ghaH}
+\index[sanat]{chaH}
+\index[sanat]{'oH}
+\index[sanat]{bIH}
 
 Klingonissa on seuraavat persoonapronominit:\\*[1em]
 \begin{tabular}{l Bc Bc}
@@ -1076,8 +1117,8 @@ Tällöin pronomini voi ottaa verbipäätteitä, mutta ei persoonaetuliitettä.
 
 \section{Interrogatiivipronominit}
 \index{interrogatiivipronomini}
-\index{nuq}
-\index{'Iv}
+\index[sanat]{nuq}
+\index[sanat]{'Iv}
 
 Interrogatiivipronominit ovat kysymyssanoina toimivia pronomineja.\\*[1em]
 \begin{tabular}{Bl Il}
@@ -1104,11 +1145,11 @@ Kuten persoonapronominitkin, interrogatiivipronominit voivat toimia verbinä ja 
 
 \subsection{Kvanttoripronominit}
 \index{kvanttoripronomini}
-\index{pagh}
-\index{vay'}
-\index{'op}
-\index{ngIq}
-\index{Hoch}
+\index[sanat]{pagh}
+\index[sanat]{vay'}
+\index[sanat]{'op}
+\index[sanat]{ngIq}
+\index[sanat]{Hoch}
 
 Klingonissa on seuraavat kvanttoripronominit:\\*[1em]
 \begin{tabular}{Bl l}
@@ -1141,15 +1182,15 @@ Esimerkiksi:\\*[1em]
 \end{tabular}
 
 \subsection{Pronomini latlh}
-\index{latlh}
+\index[sanat]{latlh}
 
 Indefiniittipronomini \textbf{latlh} merkitsee \textit{toinen}.
 \index{indefiniittipronomini}
 
 \section{Relatiivipronominit}
 \index{relatiivipronomini}
-\index{'e'}
-\index{net}
+\index[sanat]{'e'}
+\index[sanat]{net}
 
 Klingonissa on kaksi relatiivipronominia: \textbf{'e'} ja \textbf{net}.
 Molemmat viittaavat edeltävään lauseeseen.
@@ -1169,7 +1210,7 @@ Molemmat viittaavat edeltävään lauseeseen.
 \end{tabular}
 
 \textbf{'e'}-pronominia ei käytetä \textbf{neH}-apuverbin kanssa.
-\index{neH}\\*[1em]
+\index[sanat]{neH}\\*[1em]
 \begin{tabular}{l l}
     jIropHa'choH \textbf{vIneH}. & Haluan parantua. \\
     ghorgh bIQongchoH \textbf{DaneH?} & Milloin haluat mennä nukkumaan? \\
@@ -1191,9 +1232,9 @@ Yleensä adverbit sijoitetaan lauseen alkuun.\\*[1em]
 \end{tabular}
 
 \section{Adverbit je, neH ja neHHa'}
-\index{je}
-\index{neH}
-\index{neHHa'}
+\index[sanat]{je}
+\index[sanat]{neH}
+\index[sanat]{neHHa'}
 
 Poikkeuksellisesti adverbit \textbf{je} \textit{myös}, \textbf{neH} \textit{vain}, \textbf{neHHa'} \textit{ei vain} sijoitetaan predikaatin jälkeen.\\*[1em]
 \begin{tabular}{l l}
@@ -1211,8 +1252,8 @@ Poikkeuksellisesti adverbit \textbf{je} \textit{myös}, \textbf{neH} \textit{vai
 % Tämä on kirosana, joten kuuluuko sitä käsitellä "lukion" kielioppikirjassa?
 
 \section{Adverbit law' ja puS}
-\index{law'}
-\index{puS}
+\index[sanat]{law'}
+\index[sanat]{puS}
 
 Adverbeja \textbf{law'} \textit{paljon} ja \textbf{puS} \textit{vähän} käytetään vertailurakenteissa.
 \index{vertailurakenne}\\*[1em]
@@ -1223,7 +1264,7 @@ Adverbeja \textbf{law'} \textit{paljon} ja \textbf{puS} \textit{vähän} käytet
 
 Superlatiivirakenteessa käytetään sanaa \textbf{Hoch} \textit{kaikki}.
 \index{superlatiivi}
-\index{Hoch}\\*[1em]
+\index[sanat]{Hoch}\\*[1em]
 \begin{tabular}{l l}
     ghaH mIp \textbf{law'}, \textbf{Hoch} mIp \textbf{puS}. & Hän on rikkain. \\
     %Duj'e', 'oH wagh \textbf{law'}, \textbf{Hoch} wagh \textbf{puS}. & Se on kallein alus. \\
@@ -1231,10 +1272,10 @@ Superlatiivirakenteessa käytetään sanaa \textbf{Hoch} \textit{kaikki}.
 
 \section{Paikka-adverbeja}
 \index{paikka-adverbi}
-\index{Dat}
-\index{vogh}
-\index{naDev}
-\index{pa'}
+\index[sanat]{Dat}
+\index[sanat]{vogh}
+\index[sanat]{naDev}
+\index[sanat]{pa'}
 
 Substantiiveja \textbf{Dat} \textit{kaikkialla}, \textbf{vogh} \textit{jossain}, \textbf{naDev} \textit{täällä} ja \textbf{pa'} \textit{siellä} ei voi taivuttaa lokatiivissa.
 Sen sijasta ne toimivat sellaisenaan adverbeina.\\*[1em]
@@ -1254,14 +1295,14 @@ Tällöin se taipuu normaalisti lokatiivissa.\\*[1em]
 
 \section{Laskuriadverbit}
 \index{laskuriadverbi}
-\index{leS}
-\index{Hu'}
-\index{wen}
-\index{waQ}
-\index{ben}
-\index{nem}
-\index{ret}
-\index{pIq}
+\index[sanat]{leS}
+\index[sanat]{Hu'}
+\index[sanat]{wen}
+\index[sanat]{waQ}
+\index[sanat]{ben}
+\index[sanat]{nem}
+\index[sanat]{ret}
+\index[sanat]{pIq}
 
 Laskuriadverbit seuraavat lukumäärää ja ilmaisevat ajan kulumista.\\*[1em]
 \begin{tabular}{Bl Il}
@@ -1290,11 +1331,11 @@ Esimerkkejä:\\*[1em]
 \end{tabular}
 
 \section{Interrogatiiviadverbit}
-\index{chay'}
-\index{ghorgh}
-\index{qatlh}
-\index{'ar}
-\index{'arlogh}
+\index[sanat]{chay'}
+\index[sanat]{ghorgh}
+\index[sanat]{qatlh}
+\index[sanat]{'ar}
+\index[sanat]{'arlogh}
 
 \begin{tabular}{Bl Il}
     chay' & miten \\
@@ -1307,9 +1348,9 @@ Esimerkkejä:\\*[1em]
 \chapter{Konjunktiot}
 
 \section{'ej, qoj, pagh}
-\index{'ej}
-\index{qoj}
-\index{pagh}
+\index[sanat]{'ej}
+\index[sanat]{qoj}
+\index[sanat]{pagh}
 
 Seuraavat konjunktiot erottavat lauseita, partisiippeja ja adverbeja toisistaan.\\*[1em]
 \begin{tabular}{Bl Il}
@@ -1326,9 +1367,9 @@ Esimerkiksi:\\*[1em]
 \end{tabular}
 
 \section{je, joq, ghap}
-\index{je}
-\index{joq}
-\index{ghap}
+\index[sanat]{je}
+\index[sanat]{joq}
+\index[sanat]{ghap}
 
 Nämä konjunktiot erottavat substantiivilausekkeista toisistaan.\\*[1em]
 \begin{tabular}{Bl Il}
@@ -1361,17 +1402,17 @@ Klingonin lukusanat muodostetaan kymmenjärjestelmän numeroista ja suuruusluokk
     chorgh & kahdeksan & -Saghan & miljardi \\
     Hut & yhdeksän & & \\
 \end{tabular}
-\index{-maH}
-\index{-vatlh}
-\index{-SaD}
-\index{-SanID}
-\index{-netlh}
-\index{-bIp}
-\index{-'uy'}
+\index[sanat]{-maH}
+\index[sanat]{-vatlh}
+\index[sanat]{-SaD}
+\index[sanat]{-SanID}
+\index[sanat]{-netlh}
+\index[sanat]{-bIp}
+\index[sanat]{-'uy'}
 
 Luku esitetään merkitsevin numero ensin kuten suomessakin.
 Sanaa \textbf{pagh} \textit{nolla} käytetään vain yksin eikä siihen saa liittää suurusluokkaliitteitä.
-\index{pagh}
+\index[sanat]{pagh}
 
 Suurille luvuille ei ole omia liitteitä, vaan niille voi käyttää yhdistelmiä, esimerkiksi \textit{kymmenelle miljoonalle} voi käyttää liiteitä \textbf{-vatlhbIp} \textit{sata sataa tuhatta} tai \textbf{-maH'uy'} \textit{kymmenen miljoonaa}.
 
@@ -1391,7 +1432,7 @@ Luku kirjoitetaan yleensä ennen pääsanaansa.\\*[1em]
 
 Luvusta voi tehdä järjestysluvun \textbf{-DIch}-johtimella.
 Järjestysluvut kirjoitetaan adjektiivin tavoin pääsanansa jälkeen.
-\index{-DIch}
+\index[sanat]{-DIch}
 \index{järjestysluku}\\*[1em]
 \begin{tabular}{l l}
     \textbf{wa'DIch} & \textit{ensimmäinen} \\
@@ -1402,7 +1443,7 @@ Järjestysluvut kirjoitetaan adjektiivin tavoin pääsanansa jälkeen.
 \end{tabular}
 
 \textbf{-logh}-johdin muuttaa luvun adverbiksi, jolla on merkitys \textit{kertaa}.
-\index{-logh}\\*[1em]
+\index[sanat]{-logh}\\*[1em]
 \begin{tabular}{Bl Il}
     paghlogh & ei kertaakaan \\
     wa'logh & kerran \\
@@ -1546,6 +1587,18 @@ Muistattava yksitellen:
      & ng & ngay &  & ' & qaghwI' &  & . & \\
 \end{tabular}
 
+Yllä olevassa taulukossa on listattu klingonin romanisaation ''aakkoset'' ja yleiset tavat niiden lausuminen sanojen tavaamista varten.
+Taulukossa merkityt grafeemit eivät oikeastaan ole aakkosia (ne koostuvat latinalaisista aakkosista), mutta niistä puhutaan usein ''kirjaimina'' tai ''aakkosina''.
+Ne myös käyttäytyvät kuten aakkoset siinä mielessä,
+että yleisen tavan mukaan esimerkiksi \textbf{ng}:llä alkavat sanat aakkostetaan sanakirjassa vasta kaikkien \textbf{n}:llä alkavien sanojen jälkeen.
+Kolmannessa sarakkeessa olevat ääntämisohjeet eivät siis ole aakkosten nimiä, vaan oikeastaan äänteiden nimiä.
+
+Ensimmäiseen sarakkeeseen merkityt ''pIqaD-merkit'' perustuvat Star Trek -sarjoissa ja elokuvissa nähtyihin koristeellisiin merkkeihin.
+Star Trekissä nämä merkit eivät siis alunperin tarkoittaneet mitään (kuten ei sarjojen ''klin\-gon\-kaan'').
+Myöhemmin tuntemattomaksi jääneet henkilöt yhdistivät merkit romanisaation grafeemeihin luoden uuden ''fanikirjoitusjärjestelmän'',
+joka on sitemmin saavuttanut suuren suosion klingon-harrastajien keskuudessa.
+Tätä ''pIqaDia'' ei kuitenkaan voida pitää mitenkään kanonisena tai virallisena tapana kirjoittaa klingonia.
+
 \chapter{Klingonin fonotaksi}
 \label{apx:fonotaksi}
 
@@ -1587,6 +1640,51 @@ Myös monien paikkojen nimistä on vakiintuneet mukautetut versiot:
 \end{tabular}
 
 Mukautettaessa nimeä konsonanttiyhdistelmistä voi joko jättää pois viimeisen konsonantin tai laittaa konsonanttien väliin vokaalin \textbf{I}. Koska tavu ei voi alkaa vokaalilla, on kahden vokaalin väliin laitettava jokin konsonantti. Ennen \textit{i}:tä tämä voisi olla \textbf{y}, ennen \textit{o}:ta \textbf{w} ja muulloin yleensä \textbf{'}.
+
+\chapter{Star Trek -nimet}
+\label{apx:startrek}
+
+Yleensä Star Trek -sarjoissa ja elokuvissa ei puhuta ''oikeaa'' klingonia eikä hahmoilla ole klingonin fonotaksiin sopivia nimiä. Näitä nimiä on myöhemmin mukautettu fonotaksiin liitteessä~\ref{apx:fonotaksi} kuvatulla tavalla.
+
+Kuvitteellisesti nimet on kuitenkin muunnettu toiseen suuntaan: mukautettu sopimaan Liiton standardikieleen. Olen alla esitellyt joitakin sääntöjä joita tässä hypoteettisessa romanisaatiossa usein käytetään.
+
+(taulukko on seuraavalla sivulla)
+
+\newcommand{\strule}[2]{\textbf{#1}$\to$\textit{#2}}
+
+\begin{tabular}{l l l}
+    Sääntö & & Esimerkkejä \\
+    \hline
+    \textit{(1. tavu)} & \strule{a}{'} & \strule{Daghor}{D'Ghor} \\
+    & \strule{a}{o} & \strule{ghawran}{Gowron}, \strule{martaq}{Martok} \\
+    & \strule{D}{d} & \strule{DuraS}{Duras}, \strule{DennaS}{Dennas} \\
+    \textit{(1. tavu)} & \strule{e}{$\varnothing$} & \strule{be'etor}{B'Etor} \\
+    & \strule{e}{a} & \strule{cheng}{Chang}, \strule{betleH}{bat'leth} \\
+    & \strule{gh}{g} & \strule{ghawran}{Gowron}, \strule{Qotmagh}{Krotmag} \\
+    & \strule{gh}{gr} & \strule{ghe'tor}{Gre'thor}, \strule{gha'vIq}{Grafk} \\
+    \textit{(tavun lopussa)} & \strule{H}{th} & \strule{betleH}{bat'leth} \\
+    \textit{(1. tavu)} & \strule{I}{'} & \strule{lIr'el}{L'Rell}, \strule{tIquvma'}{T'kuvma} \\
+    & \strule{I}{$\varnothing$} & \strule{ghIrIlqa'}{Grilka}, \strule{wo'rIv}{Worf} \\
+    & \strule{q}{k} & \strule{luqara'}{Lukara}, \strule{martaq}{Martok} \\
+    & \strule{qS}{x} & \strule{vIqSIS}{Vixis} \\
+    \textit{(tavun alussa)} & \strule{Q}{kr} & \strule{QaS}{Kras}, \strule{valQIS}{Valkris} \\
+    \textit{(tavun lopussa)} & \strule{Q}{x} & \strule{qoreQ}{Korax} \\
+    & \strule{S}{s} & \strule{SIlreq}{Silrek}, \strule{QaS}{Kras} \\
+    & \strule{S}{z} & \strule{'a'Setbur}{Azetbur} \\
+    \textit{(tavun alussa)} & \strule{tlh}{kl} & \strule{tlhIngan}{klingon}, \strule{tlha'a}{Klaa} \\
+    \textit{(tavun lopussa)} & \strule{tlh}{th} & \strule{qolotlh}{qoloth} \\
+    \textit{(tavun lopussa)} & \strule{tlh}{ltz} & \strule{matlh}{Maltz} \\
+    & \strule{v}{f} & \strule{gha'vIq}{Grafk}, \strule{wo'rIv}{Worf} \\
+    \textit{(tavun lopussa)} & \strule{y}{i} & \strule{mo'qay}{Mo'Kai} \\
+    & \strule{'}{$\varnothing$} & \strule{ruq'e'vet}{Ruk'evet}, \strule{wo'rIv}{Worf} \\
+    & \strule{$\varnothing$}{'} & \strule{'atrom}{A'trom}, \strule{betleH}{bat'leth} \\
+\end{tabular}
+
+Jos kirjain on ''tavallinen'', se siirtyy usein suoraan: \strule{a}{a}, \strule{b}{b}, jne.
+
+Joskus vokaalit katoavat tai muuttuvat heittomerkiksi: \strule{a}{'}, \strule{I}{$\varnothing$} jne. Tämä johtuu tietysti siitä, että muunnos on tapahtunut oikeasti toiseen suuntaan ja sanoihin on pitänyt lisätä vokaaleja, jotta tavut sopisivat klingonin fonotaktisiin sääntöihin.
+
+Star Trek -kirjoittajat rakastavat heittomerkkejä, joita lisätään usein erityisesti ensimmäisen kirjaimen jälkeen: \textit{D'Ghor}, \textit{L'Rell}, \textit{G'trok}, \textit{K'Ehleyr}, jne. Jos heittomerkki on kahden konsonantin välissä, ''alkuperäisessä'' nimessä on usein vokaali tässä kohtaa. Muissa tapauksissa heittomerkillä ei ole yleensä mitään vastinetta ''alkuperäisessä'' nimessä. Sanan alussa olevan konsonantin jälkeen ei voi tulla \textbf{'}-merkkiä, sillä kaksi konsonanttia ei voi esiintyä vierekkäin.
 
 \chapter{Yleisiä adverbeja}
 \label{apx:adverbit}
@@ -1636,6 +1734,7 @@ Mukautettaessa nimeä konsonanttiyhdistelmistä voi joko jättää pois viimeise
     wa'leS & huomenna \\
     wa'­logh & kerran \\
     wej & ei vielä \\
+    wejHa' & jo \\
     'eQ & hetki sitten \\
 \end{tabular}
 
@@ -1662,7 +1761,7 @@ Nämä sanat toimivat substantiivin tavoin.
     vaj & joten \\
 \end{tabular}
 
-Perustuu Klingonska Akademienin listaan adverbeistä.\footnote{http://klingonska.org/ref/adv.html}
+Perustuu Klingonska Akademienin listaan adverbeistä.\footnote{\url{http://klingonska.org/ref/adv.html}}
 
 \chapter{Kysymyssanat}
 
@@ -1748,9 +1847,105 @@ Perustuu Klingonska Akademienin listaan adverbeistä.\footnote{http://klingonska
     rom & kongruenssi \\
 \end{tabular}
 
+\chapter{Kirosanoja}
+
+\section{Huudahduksia}
+
+Huudahduksia käytetään tekstin seassa ilmaisemaan tunnetta.
+
+\begin{tabular}{Bl l}
+    baQa' & \textit{buu!} \\
+    ghay'cha' & \\
+    ghuy' & (yleiskirosana) \\
+    ghuy'cha' & \\
+    Hu'tegh & \\
+    QI'yaH & (voimakas ja säädytön kirosana) \\
+    Qu'vatlh & (äärimmäinen viha) \\
+    va & (vähäisempi viha) \\
+\end{tabular}
+
+\section{Herjoja}
+
+Herjat ovat henkilöihin suunnattuja haukkumasanoja. Niitä voi käyttää huudahduksina tai substantiiveina.
+
+\begin{tabular}{Bl l}
+    maqdar & \\
+    nuch & \textit{pelkuri} \\
+    petaQ & (hyvin yleinen) \\
+    qoH & \textit{typerys} \\
+    Qovpatlh & \\
+    taHqeq & \\
+    toDSaH & \\
+    vum & \textit{kusipää} \\
+    yIntagh & \\
+\end{tabular}
+
+\section{jay'}
+\index[sanat]{jay'}
+
+Voimasanan \textbf{jay'} on aina oltava lauseen lopussa viimeisenä sanana. Se voimistaa edeltävää lausetta.
+
+\begin{tabular}{l l}
+    ghe'torDaq yIghoS \textbf{jay'}! & Painu helvettiin, perkele! \\
+    ropvam vImuS \textbf{jay'}! & Vihaan tätä saatanan sairautta! \\
+\end{tabular}
+
+\chapter{rur-ilmauksia}
+
+Verbiä \textbf{rur} \textit{muistuttaa} käytetään usein samalla tavalla kuin suomen sanaa \textit{kuin}.
+
+\begin{longtable}{Bl Il}
+bIr; bortaS rur & kylmä kuin kosto \\
+bIt; tI'qa' vIghro' rur & levoton kuin tika-kissa \\
+boch; ghIch rur & kiiltävä kuin nenä \\
+bom; puq rur & laulaa kuin lapsi (falsetissa) \\
+Dogh; tIghla' rur & typerä kuin t'gla \\
+Doq 'ej beqpuj rur & oranssi kuin beqpuj-mineraali \\
+ghung; qagh rur & nälkäinen kuin gagh \\
+Hem; tlhIngan rur & ylpeä kuin klingoni \\
+Hoj; tera'ngan rur & varovainen kuin maapallolainen \\
+HoS; 'Iw rur & vahva kuin veri \\
+HoSghaj; mupwI' rur & voimakas kuin vasara \\
+jatlh; ghughughwI' rur & puhua kuin murisija (rahisten) \\
+jeD; ghevI' rur & sakea kuin ghevI'-kastike \\
+jej; Daqtagh rur & terävä kuin d'k tahg -veitsi \\
+jejHa'; naH taj rur & tylsä kuin hedelmäveitsi \\
+\textmd{let mInDu'Daj; Separmey rur.} & \textup{Hänen silmänsä ovat kovat kuin Separ-jalokivet.} \\
+lo'laHbe'; chetvI' chIm rur & hyödytön kuin tyhjä torpedoputki \\
+lugh; Sor rur & oikeassa kuin puu \\
+matlhHa'; romuluSngan rur & uskoton kuin romuluslainen \\
+mIgh; molor rur & paha kuin Molor \\
+naS; norgh rur & julma kuin norg \\
+nong; vulqangan rur & intohimoinen kuin vulkanuslainen \textup{(ironisesti)}\\
+ngo' / qan; QI'tu' rur & vanha kuin paratiisi \\
+puj; bIQ rur & heikko kuin vesi \\
+qej; veqlargh rur & pahansuopa kuin Fek'lhr \\
+qur; verengan rur & ahne kuin ferengi \\
+quvHa'; ghe'torngan rur & kunniaton kuin gretorlainen \\
+ram; ghIlab ghew rur & yhdentekevä kuin glob-kärpänen \\
+Sagh; Ho''oy' rur & vakava kuin hammassärky \\
+tam; Hew rur & hiljainen kuin patsas \\
+tlhab; ngem Ha'DIbaH rur & vapaa kuin metsän eläin \\
+tlhIb; toppa' rur & epäpätevä kuin topah \\
+tun; reghuluS 'Iwghargh rur & pehmeä kuin reguluslainen verimato \\
+val; Huy' rur & älykäs kuin kulmakarva \\
+wIH; Hur'Iqngan rur & armoton kuin hur'q \\
+wov; ghI'boj Sech rur & kirkas kuin g'boj-soihtu \\
+yuD; jey'naS rur & epärehellinen kuin kaksiteräinen kirves \\
+yuDHa'; ghIt rur & rehellinen kuin kirveen terä \\
+'IQ; rav rur & surullinen kuin lattia \\
+'oj; bomwI' rur & janoinen kuin laulaja \\
+'up; yIH rur & inhottava kuin tribble \\
+\end{longtable}
+
+Lista on koottu boQwI'-sanakirjan esimerkeistä.\footnote{\url{https://github.com/De7vID/klingon-assistant-data}}
+
 \backmatter
 \clearpage
+\ifxetex
 \addcontentsline{toc}{chapter}{Hakemisto}
+\fi
+\printindex[sanat]
 \printindex
 
 \end{document}
