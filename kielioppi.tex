@@ -26,6 +26,9 @@
 \usepackage{hyperref}
 \usepackage{tikz}
 
+\usetikzlibrary{shapes.geometric,arrows,arrows.meta}
+\usetikzlibrary{shapes.multipart}
+
 \makeindex[title=Käsitteiden hakemisto]
 \makeindex[name=sanat,title=Klingonin sanojen hakemisto]
 
@@ -50,7 +53,7 @@
 \vspace*{\fill}
 1. painos
 
-© 2020 Iikka Hauhio
+© 2021 Iikka Hauhio
 
 %\textbf{Osittainen kopiointikielto} \\
 %Tämän teoksen kopioiminen on tekijänoikeuslain (404/61, muut. 849/18) mukaisesti kielletty lukuunottamatta Suomen valtion ja Kopiosto r.y.:n tekemässä sopimuksessa tarkemmin määriteltyä osittaista kopiointia opetustarkoituksiin.
@@ -97,6 +100,22 @@ vay' bolu'chugh, HISovmoH.
 \tableofcontents
 
 \mainmatter
+
+\chapter{Johdanto}
+
+Klingon on yhdysvaltalaisen kielitietelijän, tohtori Marc Okrandin kehittämä fiktiivinen keinotekoinen kieli. Sen alkuperäinen tarkoitus oli toimia Star Trek -universumissa elävien klingonien kansalliskielenä. Tähän mennessä klingonin kieltä on käytetty kuudessa Star Trek -elokuvassa, kahdessa televisiosarjassa\footnote{Star Trek: Enterprise ja Star Trek: Discovery. Muissa televisiosarjoissa ei puhuta oikeaa klingonin kieltä.} ja useissa Okrandin kirjoittamissa kirjoissa. Tämän lisäksi kielellä on oma harrastajayhteisönsä, joka on tuottanut lukuisia klingoninkielisiä teoksia.
+
+Kielenä klingon ei ole sukua millekään maapallon kielelle, ja monet sen ominaisuudet on tarkoituksella valittu siten, että ne ovat mahdollisimman harvinaisia ihmiskielissä. Klingonin sanoja ei ole suoraan lainattu mistään muusta kielestä hyvin pientä määrää lainasanoja lukuunottamatta. Monet sanat perustuvat sen sijaan sanaleikkeihin ja vitseihin.
+
+Marc Okrandia pidetään klingonin ylimpänä auktoriteettina ja hänen kirjoittamaansa klingonia pidetään määritelmällisesti hyvänä. Klingoninkielinen teksti voidaankin jakaa Okrandin kirjoittamaan \textit{kanoniseen klingoniin} ja harrastelijoiden tuottamaan \textit{epäkanoniseen klingoniin}. Tärkeimpiä kanonisia teoksia ovat kielioppia ja sanastoa käsittelevät \textit{The Klingon Dictionary}, \textit{Klingon for Galactic Traveler}, mietelausekokoelma \textit{The Klingon Way} ja runoeepos \textit{paq'batlh}. Näiden lisäksi kanonisina lähteinä pidetään Okrandin haastatteluja eri lehdissä ja medioissa sekä sekalaisia muita hänen tekemiään klingontekstejä.
+
+Valitettavasti kanoniset lähteet ovat monesti epäselviä tai ristiriidassa keskenään. Eräs suuri epäselvyysongelma liittyy Okrandin klingon-englanti-sanakirjaan, johon ei ole merkitty verbien transitiivisuuksia. Klingonissa, kuten suomessa ja toisin kuin englannissa, verbit ovat yleensä joko transitiivisia tai intransitiivisia, mutta eivät molempia: klingonissa on esimerkiksi erikseen verbit \textbf{pum} \textit{pudota} ja \textbf{pummoH} \textit{pudottaa}. Kuitenkaan monien sanojen englanninkielisistä käännöksistä ei voi tietää kumpi merkitys on kyseessä, sillä englannissa sama sana on usein sekä intransitiivinen että transitiivinen. Esimerkiksi sana \textbf{tet} on käännetty Okrandin sanakirjassa vain \textit{melt} (\textit{sulaa} tai \textit{sulattaa}). Monet uskoivat sanan tarkoittavan \textit{sulaa}, olisihan silloin mahdollista yhä sanoa \textbf{*tetmoH} \textit{sulattaa}, mutta itse asiassa myöhemmin Okrand on käyttänyt sanaa merkityksessä \textit{sulattaa}. Ei ole tiedossa miten klingoniksi voi sanoa intransitiivisen merkityksen \textit{sulaa}.
+
+Ristiriitaisuudet ovat toinen suuri ongelma. Ne saattavat johtua siitä, että Okrand on unohtanut aiemmin kehittämiään sääntöjä, tai vain kirjoitus- tai ajatusvirheistä. Eräs ristiriita liittyy lokatiivisijamuodon (\textbf{-Daq}) merkitykseen: aiemmin Okrand on käyttänyt liikkumisverbien \textbf{ghoS}, \textbf{jaH}, ym. yhteydessä sitä sekä merkityksessä \textit{jonnekin} että \textit{jossakin}. Kuitenkin myöhemmin hän on väittänyt sen merkitsevän vain \textit{jossakin}. Klingoninharrastajat eivät tiedä miten suhtautua tähän ja toistavat joskus vanhoja sääntöjä ja joskus uusia sääntöjä.
+
+Tässä kirjassa kiistellyt säännöt on ilmaistu sanoilla ''pidetään huonona kielenkäyttönä''. Nämä sanat tarkoittavat, että sääntöä saatetaan rikkoa kaanonissa tai että se on uusi ja on ristiriidassa aiempien sääntöjen kanssa.
+
+Tämä kirja on oma tulkintansa klingonin kieliopista eikä käytä samaa käsitteistöä tai rakennetta kuin Okrandin virallinen kielioppiteos \textit{The Klingon Dictionary}. Eroja on käsitelty tarkemmin liitteessä~\ref{apx:perinne}.
 
 \chapter{Substantiivit}
 
@@ -346,6 +365,12 @@ Lokatiivia käytetään ilmaisemaan
     \textbf{juHDaq} yIjaH! & Mene kotiin! \\
     'u' \textbf{HeHDaq} tlhIngan juHqo'vo'. & Klingonien kotimaailmasta \\
     & maailman laidalle. \\
+\end{tabular}
+
+Liikkumisverbien kuten \textbf{jaH} ja \textbf{ghoS} määränpää ilmaistaan suoralla objektilla, joka voidaan taivuttaa joko lokatiivissa tai nominatiivissa. Tällöin pidetään huonona kielenkäyttönä käyttää verbietuliitettä, jonka mukaan objektia ei ole (kuten \textbf{jI-}).\\*[1em]
+\begin{tabular}{l l}
+    \textbf{juHDaq / juH} vIjaH. & Menen kotiin. \\
+    \textbf{juHDaq} jIjaH. & Menen kodissa / kotiin. \\
 \end{tabular}
 
 \subsection{Elatiivi}
@@ -647,6 +672,8 @@ Modaalipäätteillä ilmaistaan subjektin valmiutta tai tarvetta tehdä asia.\\*
     jIHvaD \textbf{bIlujvIp'a'}? & Pelkäätkö hävitä minulle? \\
 \end{tabular}
 
+\textbf{-nIS} tarkoittaa asiayhteydestä riippuen joko \textit{täytyy} tai \textit{pitäisi}.
+
 \section{Muutosjohtimet}
 
 Muutospäätteet \textbf{-choH} ja \textbf{-qa'} ilmaisevat muutosta tilassa.\\*[1em]
@@ -885,7 +912,7 @@ On aina sallittua käyttää näiden päätteiden sijasta vastaavia päätteitä
 \index{progressiivi}
 \index{intentionaali}
 
-Aspektin päätteen liittämistä verbiin, jolla on jussiivin pääte \textbf{-jaj}, tai verbiin, jonka objekti on toinen lause, pidetään huonona kielenkäyttönä.
+Aspektin päätteen liittämistä verbiin, jolla on jussiivin pääte \textbf{-jaj}, tai verbiin, jonka objekti on toinen lause, pidetään huonona kielenkäyttönä. Tämä sääntö ei kuitenkaan ilmeisesti ole aivan ehdoton, sillä sitä on rikottu kaanonissa.
 \index[sanat]{-jaj}
 
 \section{-neS-pääte}
@@ -1497,8 +1524,8 @@ Järjestysluvut kirjoitetaan adjektiivin tavoin pääsanansa jälkeen.
 \begin{tabular}{l l}
     \textbf{wa'DIch} & \textit{ensimmäinen} \\
     \textbf{cha'DIch} & \textit{toinen} \\
-    \textbf{wa'maHDich} & \textit{kymmenes} \\
-    veng \textbf{wa'Dich} & Ensimmäinen Kaupunki \\
+    \textbf{wa'maHDIch} & \textit{kymmenes} \\
+    veng \textbf{wa'DIch} & Ensimmäinen Kaupunki \\
     \textbf{wa'DIch} jISop. & Syön ensin. \\
 \end{tabular}
 
@@ -1509,6 +1536,37 @@ Järjestysluvut kirjoitetaan adjektiivin tavoin pääsanansa jälkeen.
     wa'logh & kerran \\
     cha'logh & kahdesti, kaksi kertaa \\
 \end{tabular}
+
+\appendix
+\chapter{Klingonin aakkoset}
+
+\begin{tabular}{Tl Bl Il | Tl Bl Il | Tl l Il}
+     & a & 'at &  & o & 'ot &  & 0 & pagh \\
+     & b & bay &  & p & pay &  & 1 & wa' \\
+     & ch & chay &  & q & qay &  & 2 & cha' \\
+     & D & Day &  & Q & Qay &  & 3 & wej \\
+     & e & 'et &  & r & ray &  & 4 & loS \\
+     & gh & ghay &  & S & Say &  & 5 & vagh \\
+     & H & Hay &  & t & tay &  & 6 & jav \\
+     & I & 'It &  & tlh & tlhay &  & 7 & Hoch \\
+     & j & jay &  & u & 'ut &  & 8 & chorgh\\
+     & l & lay &  & v & vay &  & 9 & Hut\\
+     & m & may &  & w & way & & & \\
+     & n & nay &  & y & yay &  & , & \\
+     & ng & ngay &  & ' & qaghwI' &  & . & \\
+\end{tabular}
+
+Yllä olevassa taulukossa on listattu klingonin romanisaation ''aakkoset'' ja yleiset tavat niiden lausuminen sanojen tavaamista varten.
+Taulukossa merkityt grafeemit eivät oikeastaan ole aakkosia (ne koostuvat latinalaisista aakkosista), mutta niistä puhutaan usein ''kirjaimina'' tai ''aakkosina''.
+Ne myös käyttäytyvät kuten aakkoset siinä mielessä,
+että yleisen tavan mukaan esimerkiksi \textbf{ng}:llä alkavat sanat aakkostetaan sanakirjassa vasta kaikkien \textbf{n}:llä alkavien sanojen jälkeen.
+Kolmannessa sarakkeessa olevat ääntämisohjeet eivät siis ole aakkosten nimiä, vaan oikeastaan äänteiden nimiä.
+
+Ensimmäiseen sarakkeeseen merkityt ''pIqaD-merkit'' perustuvat Star Trek -sarjoissa ja elokuvissa nähtyihin koristeellisiin merkkeihin.
+Star Trekissä nämä merkit eivät siis alunperin tarkoittaneet mitään (kuten ei sarjojen ''klin\-gon\-kaan'').
+Myöhemmin tuntemattomaksi jääneet henkilöt yhdistivät merkit romanisaation grafeemeihin luoden uuden ''fanikirjoitusjärjestelmän'',
+joka on sitemmin saavuttanut suuren suosion klingon-harrastajien keskuudessa.
+Tätä ''pIqaDia'' ei kuitenkaan voida pitää mitenkään kanonisena tai virallisena tapana kirjoittaa klingonia.
 
 \chapter{Oikeinkirjoitus}
 
@@ -1630,37 +1688,6 @@ Muistattava yksitellen:
     veSDuj & sota-alus \\
 \end{tabular}
 
-\appendix
-\chapter{Klingonin aakkoset}
-
-\begin{tabular}{Tl Bl Il | Tl Bl Il | Tl l Il}
-     & a & 'at &  & o & 'ot &  & 0 & pagh \\
-     & b & bay &  & p & pay &  & 1 & wa' \\
-     & ch & chay &  & q & qay &  & 2 & cha' \\
-     & D & Day &  & Q & Qay &  & 3 & wej \\
-     & e & 'et &  & r & ray &  & 4 & loS \\
-     & gh & ghay &  & S & Say &  & 5 & vagh \\
-     & H & Hay &  & t & tay &  & 6 & jav \\
-     & I & 'It &  & tlh & tlhay &  & 7 & Hoch \\
-     & j & jay &  & u & 'ut &  & 8 & chorgh\\
-     & l & lay &  & v & vay &  & 9 & Hut\\
-     & m & may &  & w & way & & & \\
-     & n & nay &  & y & yay &  & , & \\
-     & ng & ngay &  & ' & qaghwI' &  & . & \\
-\end{tabular}
-
-Yllä olevassa taulukossa on listattu klingonin romanisaation ''aakkoset'' ja yleiset tavat niiden lausuminen sanojen tavaamista varten.
-Taulukossa merkityt grafeemit eivät oikeastaan ole aakkosia (ne koostuvat latinalaisista aakkosista), mutta niistä puhutaan usein ''kirjaimina'' tai ''aakkosina''.
-Ne myös käyttäytyvät kuten aakkoset siinä mielessä,
-että yleisen tavan mukaan esimerkiksi \textbf{ng}:llä alkavat sanat aakkostetaan sanakirjassa vasta kaikkien \textbf{n}:llä alkavien sanojen jälkeen.
-Kolmannessa sarakkeessa olevat ääntämisohjeet eivät siis ole aakkosten nimiä, vaan oikeastaan äänteiden nimiä.
-
-Ensimmäiseen sarakkeeseen merkityt ''pIqaD-merkit'' perustuvat Star Trek -sarjoissa ja elokuvissa nähtyihin koristeellisiin merkkeihin.
-Star Trekissä nämä merkit eivät siis alunperin tarkoittaneet mitään (kuten ei sarjojen ''klin\-gon\-kaan'').
-Myöhemmin tuntemattomaksi jääneet henkilöt yhdistivät merkit romanisaation grafeemeihin luoden uuden ''fanikirjoitusjärjestelmän'',
-joka on sitemmin saavuttanut suuren suosion klingon-harrastajien keskuudessa.
-Tätä ''pIqaDia'' ei kuitenkaan voida pitää mitenkään kanonisena tai virallisena tapana kirjoittaa klingonia.
-
 \chapter{Klingonin fonotaksi}
 \label{apx:fonotaksi}
 
@@ -1695,13 +1722,17 @@ Yleensä kuitenkin lainasanoja ei transliteroida suoraan, vaan niistä luodaan k
 
 Myös monien paikkojen nimistä on vakiintuneet mukautetut versiot:
 
-\begin{tabular}{Il Bl}
-    Terra (Maa) & tera' \\
-    Eurooppa & 'ewrop \\
-    Suomi & SuwomIy \\
+\begin{tabular}{l Il Bl}
+    Maa & Terra & tera' \\
+    & Eurooppa & 'ewrop \\
+    & Suomi & SuwomIy \\
+    Tanska & Danmark & Denmargh \\
+    Saksa & Deutschland & DoyIchlan \\
+    & Venezuela & veneSwe'la' \\
+    Bulgaria & България (Bǎlgarija) & balgharya' \\
 \end{tabular}
 
-Mukautettaessa nimeä konsonanttiyhdistelmistä voi joko jättää pois viimeisen konsonantin tai laittaa konsonanttien väliin vokaalin \textbf{I}. Koska tavu ei voi alkaa vokaalilla, on kahden vokaalin väliin laitettava jokin konsonantti. Ennen \textit{i}:tä tämä voisi olla \textbf{y}, ennen \textit{o}:ta \textbf{w} ja muulloin yleensä \textbf{'}.
+Mukautettaessa nimeä konsonanttiyhdistelmistä voi joko jättää pois viimeisen konsonantin tai laittaa konsonanttien väliin vokaalin \textbf{I}. Tavun lopussa \textit{rk} muutetaan joskus muotoon \textbf{rgh}. Koska tavu ei voi alkaa vokaalilla, on kahden vokaalin väliin laitettava jokin konsonantti. Ennen \textit{i}:tä tämä voisi olla \textbf{y}, ennen \textit{o}:ta ja \textit{u}:ta \textbf{w} ja muulloin yleensä \textbf{'}. Diftongit kuten \textit{ia}, \textit{ue} ym. muutetaan muotoihin \textbf{ya}, \textbf{we} jne. jos tavun alun konsonantti on mahdollista siirtää edellisen tavun loppuun.
 
 \chapter{Star Trek -nimet}
 \label{apx:startrek}
@@ -2002,6 +2033,32 @@ yuDHa'; ghIt rur & rehellinen kuin kirveen terä \\
 \end{longtable}
 
 Lista on koottu boQwI'-sanakirjan esimerkeistä.\footnote{\url{https://github.com/De7vID/klingon-assistant-data}}
+
+\chapter{Perinteinen klingonin kielioppi}
+\label{apx:perinne}
+
+Marc Okrand käyttää kielioppi- ja sanakirjateoksessaan \textit{The Klingon Dictionary} erilaista järjestelmää sanojen ja päätteiden luokitteluun kuin mitä tässä kirjassa on käytetty. Järjestelmä perustuu väitetysti ''klingonien oman kielitieteen'' käsitteistöön.
+
+Perinteisesti klingonin sanat jaetaan kolmeen sanaluokkaan: substantiiveihin (\textit{DIpmey}), verbeihin (\textit{wotmey}) ja muihin sanoihin (\textit{chuvmey}). Tämän lisäksi klingonin substantiiviliitteet (\textit{DIp mojaqmey}) on jaettu viiteen luokkaan ja verbipäätteet (\textit{wot mojaqmey}) kymmeneen luokkaan. Näiden lisäksi kielessä on verbietuliiteitä (\textit{moHaqmey}).
+
+Alla on taulukoitu substantiiviliitteet.
+
+\begin{tikzpicture}[every node/.style={rectangle, draw=black, fill=white}]
+    \node(l1) [draw, anchor=text, rectangle split,rectangle split parts=3]{
+        \textbf{-'a'}
+        \nodepart{n2}
+        \textbf{-Hom}
+        \nodepart{n3}
+        \textbf{-oy}
+    }
+    \node(l2) [right of=l1, draw, anchor=text, rectangle split,rectangle split parts=3]{
+        \textbf{-qoq}
+        \nodepart{n2}
+        \textbf{-Hey}
+        \nodepart{n3}
+        \textbf{-na'}
+    }
+\end{tikzpicture}
 
 \backmatter
 \clearpage
