@@ -12,6 +12,7 @@
 %\newfontfamily\pIqaD{pIqaD-qolqoS.ttf}
 \newfontface  \pIqaD{pIqaD-qolqoS.ttf}
 %\setmainfont[Ligatures=TeX]{ebgaramond}
+\newfontface  \dejavu{DejaVuSans.ttf}
 
 %\usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
@@ -25,9 +26,6 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{tikz}
-
-\usetikzlibrary{shapes.geometric,arrows,arrows.meta}
-\usetikzlibrary{shapes.multipart}
 
 \makeindex[title=Käsitteiden hakemisto]
 \makeindex[name=sanat,title=Klingonin sanojen hakemisto]
@@ -103,7 +101,7 @@ vay' bolu'chugh, HISovmoH.
 
 \chapter{Johdanto}
 
-Klingon on yhdysvaltalaisen kielitietelijän, tohtori Marc Okrandin kehittämä fiktiivinen keinotekoinen kieli. Sen alkuperäinen tarkoitus oli toimia Star Trek -universumissa elävien klingonien kansalliskielenä. Tähän mennessä klingonin kieltä on käytetty kuudessa Star Trek -elokuvassa, kahdessa televisiosarjassa\footnote{Star Trek: Enterprise ja Star Trek: Discovery. Muissa televisiosarjoissa ei puhuta oikeaa klingonin kieltä.} ja useissa Okrandin kirjoittamissa kirjoissa. Tämän lisäksi kielellä on oma harrastajayhteisönsä, joka on tuottanut lukuisia klingoninkielisiä teoksia.
+Klingon on yhdysvaltalaisen kielitietelijän, tohtori Marc Okrandin kehittämä fiktiivinen keinotekoinen kieli. Sen alkuperäinen tarkoitus oli toimia Star Trek -universumissa elävien klingonien kansalliskielenä. Tähän mennessä klingonin kieltä on käytetty kuudessa Star Trek -elokuvassa, kahdessa televisiosarjassa\footnote{\textit{Star Trek: Enterprise} ja \textit{Star Trek: Discovery}. Muissa televisiosarjoissa ei puhuta oikeaa klingonin kieltä.} ja useissa Okrandin kirjoittamissa kirjoissa. Tämän lisäksi kielellä on oma harrastajayhteisönsä, joka on tuottanut lukuisia klingoninkielisiä teoksia.
 
 Kielenä klingon ei ole sukua millekään maapallon kielelle, ja monet sen ominaisuudet on tarkoituksella valittu siten, että ne ovat mahdollisimman harvinaisia ihmiskielissä. Klingonin sanoja ei ole suoraan lainattu mistään muusta kielestä hyvin pientä määrää lainasanoja lukuunottamatta. Monet sanat perustuvat sen sijaan sanaleikkeihin ja vitseihin.
 
@@ -176,13 +174,13 @@ Klingonissa substantiiviliitteiden on aina oltava seuraavalla tavalla järjestyk
 \begin{tabular}{l Bl}
 juuri & Duj \\
 johdin & -Hom \\
-täsmennysliite & -qoq \\
 monikon tunnnus & -mey \\
+täsmennysliite & -qoq \\
 omistusliite tai demonstratiiviliite & -lIj \\
 sijapääte & -mo' \\
 \end{tabular}
 
-\textbf{DujHomqoqmeylIjmo'} \textit{Sinun niin kutsuttujen pikku alustesi vuoksi}
+\textbf{DujHommeyqoqlIjmo'} \textit{Sinun niin kutsuttujen pikku alustesi vuoksi}
 
 \section{Johdinliitteet}
 \index[sanat]{-'a'}
@@ -196,26 +194,6 @@ sijapääte & -mo' \\
 \end{tabular}
 
 \textbf{-Hom}-liitteellä on halveksiva sävy, ja \textbf{-oy}-liitteellä on hellittelevä sävy.
-
-\section{Täsmennysliitteet}
-\index{täsmennysliitteet}
-\index[sanat]{-qoq}
-\index[sanat]{-Hey}
-\index[sanat]{-na'}
-
-Täsmennysliiteellä voi ilmaista, kuinka sopiva käytetty sana puhujan mielestä on.\\*[1em]
-\begin{tabular}{Bl l}
-    -qoq & ''niin kutsuttu'' \\
-    -Hey & ''ilmeisesti'': puhuja ei ole varma onko käytetty sana oikea \\
-    -na' & ''varmasti'': puhuja on varma käyttämästään sanasta \\
-\end{tabular}
-
-Esimerkiksi:\\*[1em]
-\begin{tabular}{l l}
-    luj SuvwI'\textbf{qoq}. & Niin kutsuttu soturi hävisi. \\
-    ghojwI'\textbf{Hey} 'oH puq'e'. & Lapsi on ilmeisesti oppilas. \\
-    Duj\textbf{na'} vIleghpu'. & Näin varmasti aluksen. \\
-\end{tabular}
 
 \section{Monikko}
 \index{monikko}
@@ -237,6 +215,26 @@ Jos \textbf{-mey}-liitettä käyttää henkilöiden tai epäsäännöllisten san
 \begin{tabular}{l l}
     \textbf{puqmey} vIlegh. & Näin lapsia siellä täällä. \\
     qatlh \textbf{jengva'mey} tu'lu'? & Miksi lautasia on siellä täällä? \\
+\end{tabular}
+
+\section{Täsmennysliitteet}
+\index{täsmennysliitteet}
+\index[sanat]{-qoq}
+\index[sanat]{-Hey}
+\index[sanat]{-na'}
+
+Täsmennysliiteellä voi ilmaista, kuinka sopiva käytetty sana puhujan mielestä on.\\*[1em]
+\begin{tabular}{Bl l}
+    -qoq & ''niin kutsuttu'' \\
+    -Hey & ''ilmeisesti'': puhuja ei ole varma onko käytetty sana oikea \\
+    -na' & ''varmasti'': puhuja on varma käyttämästään sanasta \\
+\end{tabular}
+
+Esimerkiksi:\\*[1em]
+\begin{tabular}{l l}
+    luj SuvwI'\textbf{qoq}. & Niin kutsuttu soturi hävisi. \\
+    ghojwI'\textbf{Hey} 'oH puq'e'. & Lapsi on ilmeisesti oppilas. \\
+    Duj\textbf{na'} vIleghpu'. & Näin varmasti aluksen. \\
 \end{tabular}
 
 \section{Omistusliitteet}
@@ -703,11 +701,12 @@ Muihin verbeihin lisättynä \textbf{-choH} tarkoittaa \textit{alkaa tehdä}:\\*
     \textbf{qamuSqa'}. & Alan vihata sinua taas. \\
 \end{tabular}
 
-\section{Kausaalijohdin -moH}
+\section{Kausatiivijohdin -moH}
 \index[sanat]{-moH}
-\index{kausaali}
+\index{kausatiivi}
+\index{aiheutusjohdin}
 
-1. Liitettynä intransitiiviseen verbiin kausaalipääte \textbf{-moH} muuttaa verbin transitiiviseksi.
+1. Liitettynä intransitiiviseen verbiin kausatiivipääte \textbf{-moH} muuttaa verbin transitiiviseksi.
 \index{transitiivinen verbi}
 \index{intransitiivinen verbi}\\*[1em]
 \begin{tabular}{Bl Il | Bl Il}
@@ -1329,12 +1328,13 @@ Poikkeuksellisesti adverbit \textbf{je} \textit{myös}, \textbf{neH} \textit{vai
 
 %\section{Adverbi jay'}
 % Tämä on kirosana, joten kuuluuko sitä käsitellä "lukion" kielioppikirjassa?
+% -> Laitoin liitteeseen
 
-\section{Adverbit law' ja puS}
+\section{Vertailusanat law' ja puS}
 \index[sanat]{law'}
 \index[sanat]{puS}
 
-Adverbeja \textbf{law'} \textit{paljon} ja \textbf{puS} \textit{vähän} käytetään vertailurakenteissa.
+Vertailusanoja \textbf{law'} \textit{paljon} ja \textbf{puS} \textit{vähän} käytetään vertailurakenteissa.
 \index{vertailurakenne}\\*[1em]
 \begin{tabular}{l l}
     jIH HoS \textbf{law'}, SoH HoS \textbf{puS}. & Olen sinua voimakkaampi. \\
@@ -1349,6 +1349,8 @@ Superlatiivirakenteessa käytetään sanaa \textbf{Hoch} \textit{kaikki}.
     ghaH mIp \textbf{law'}, \textbf{Hoch} mIp \textbf{puS}. & Hän on rikkain. \\
     Duj'e', 'oH wagh \textbf{law'}, \textbf{Hoch} wagh \textbf{puS}. & Se on kallein alus. \\
 \end{tabular}
+
+\textbf{law'} \textit{olla paljon} ja \textbf{puS} \textit{olla vähän} ovat myös adjektiiviverbejä.
 
 \section{Paikka-adverbeja}
 \index{paikka-adverbi}
@@ -1568,10 +1570,80 @@ Myöhemmin tuntemattomaksi jääneet henkilöt yhdistivät merkit romanisaation 
 joka on sitemmin saavuttanut suuren suosion klingon-harrastajien keskuudessa.
 Tätä ''pIqaDia'' ei kuitenkaan voida pitää mitenkään kanonisena tai virallisena tapana kirjoittaa klingonia.
 
+\chapter{Klingonin ääntäminen}
+
+\section{Äänteet}
+
+\begin{longtable}{Bl l p{8cm}}
+    a & /ɑ/ tai /a/ & Kuin suomen \textit{a}. \\
+    b & /b/ & Kuin suomen \textit{b} sanassa \textit{dubata}. \\
+    ch & /t͡ʃ/ & Kuin suomen \textit{tš} sanassa \textit{Tšekki} tai englannin \textit{ch} sanassa \textit{cheese}. \\
+    D & /ɖ/ & Kuin englannin \textit{th} sanassa \textit{they}. \\
+    e & /ɛ/ & Kuin englannin \textit{e} sanassa \textit{bed}. \\
+    gh & /ɣ/ & Hieman kuin ranskan \textit{r} mutta lausuttuna vähän ylempänä suussa (soinnillinen). Kuin arabian {\dejavu غ} . \\
+    H & /x/ & Hieman kuin ranskan \textit{r} mutta lausuttuna vähän ylempänä suussa (soinniton). Kuin arabian {\dejavu خ} . \\
+    I & /ɪ/ tai /i/ & Yleensä kuin englannin \textit{i} sanassa \textit{bit}, mutta vaihtoehtoisesti kuin suomen \textit{i}. \\
+    j & /d͡ʒ/ & Kuin suomen \textit{dž} sanassa \textit{džonkki} tai englannin \textit{j} sanassa \textit{jump} \\
+    l & /l/ & Kuin suomen \textit{l}. \\
+    m & /m/ & Kuin suomen \textit{m}. \\
+    n & /n/ & Kuin suomen \textit{n}. \\
+    ng & /ŋ/ & Kuin suomen \textit{ng} sanassa \textit{kangas}. \\
+    o & /o/ & Kuin suomen \textit{o}. \\
+    p & /pʰ/ & Kuin suomen \textit{p} mutta aspiroitunut. \\
+    q & /qʰ/ & Kuin suomen \textit{k} mutta lausuttuna vähän alempana suussa. Kuin arabian {\dejavu ق} mutta aspiroitunut. \\
+    Q & /q͡χ/ & \textbf{q}-äänne ja soinniton kurkkuärrä yhtä aikaa. \\
+    r & /r/ & Kuin suomen \textit{r}. \\
+    S & /ʂ/ & Kuin suomen \textit{š} tai englannin \textit{sh} (suhu-ässä), mutta kielen kärki koskettaa kitalakea kuin lausuttaessa \textbf{D}:tä. \\
+    t & /tʰ/ & Kuin suomen \textit{t} mutta aspiroitunut. \\
+    tlh & /t͡ɬ/ & Lausutaan pitämällä kieli \textit{t}:n lausumiseen tarkoitetussa asennossa ja päästämällä ilmaa kielen sivuista ulos (ei nenästä). Kuin \textit{tl} sanassa \textit{Nahuatl}. \\
+    u & /u/ & Kuin suomen \textit{u}. \\
+    w & /w/ & Kuin englannin \textit{w} sanassa \textit{wow}. \\
+    y & /j/ & Kuin suomen \textit{j}. \\
+    ' & /ʔ/ & Glottaaliklusiili. Esiintyy suomessa imperatiivin ja vokaalilla alkavan sanan välissä (esim. \textit{anna olla}). \\
+\end{longtable}
+
+\textbf{y} ja \textbf{w} voivat esiintyä diftongeissa \textbf{ay}, \textbf{ey}, \textbf{Iy}, \textbf{oy}, \textbf{uy}, \textbf{aw}, \textbf{ew} ja \textbf{Iw}.
+
+\begin{longtable}{Bl l p{8cm}}
+    ay & /ɑɪ̯/, /ɑi̯/, /aɪ̯/ tai /ai̯/ & Kuin suomen \textit{ai}. \\
+    ey & /ɛɪ̯/ tai /ɛi̯/ & Kuin englannin \textit{pay}. \\
+    Iy & /iː/ & Kuin suomen pitkä \textit{ii}. \\
+    oy & /oɪ̯/ tai /oi̯/ & Kuin suomen \textit{oi}. \\
+    uy & /uɪ̯/ tai /ui̯/ & Kuin suomen \textit{ui}. \\
+    aw & /ɑu̯/ tai /au̯/ & Kuin suomen \textit{au}. \\
+    ew & /ɛu̯/ & \\
+    Iw & /ɪu̯/ tai /iu̯/ & Kuin suomen \textit{iu}. \\
+\end{longtable}
+
+\section{Sanapaino}
+
+Jos sanan vartalossa on tavu, joka loppuu glottaaliklusiiliin \textbf{'}, paino on tällä tavulla. Muussa tapauksessa paino on vartalon viimeisellä tavulla.
+
+Lisäksi paino on jokaisella liitteellä ja päätteellä, jonka lopussa on glottaaliklusiili. Poikkeuksena verbin ensimmäisellä suffiksilla ei ole koskaan painoa.
+
+Alla olevissa esimerkeissä paino on tummennettu.
+
+\begin{tabular}{l Il}
+    'e\textbf{pIl} & omena \\
+    \textbf{SoSwI'} & äitini \\
+    \textbf{Duj}wIj & alukseni \\
+    qo\textbf{vIj}vam & tämä koira \\
+    \textbf{qa'}vIn\textbf{'e'} & kahvi \\
+    \textbf{tu'mI'}qoq\textbf{mo'} & sukan takia \\
+    \textbf{Do'Ha'} & epäonnekkaasti \\
+    \textbf{Do'}Ha' & olla epäonnekas \\
+    jI\textbf{vum} & työskentelen \\
+    \textbf{loS}lI' & hän odottaa \\
+    bIghu\textbf{ghugh}laH & voit murista \\
+    Da\textbf{chu'}Ha'\textbf{mo'} & koska laitoit sen pois päältä \\
+\end{tabular}
+
 \chapter{Oikeinkirjoitus}
 
 Tämä luku käsittelee klingonin romanisaation oikeinkirjoitusta.
-pIqaD-järjestelmää ei käsitellä.
+pIqaD-jär\-jes\-tel\-mää ei käsitellä.
+
+Koska romanisaatio ei ole klingonin ''todellinen'' kirjoitusjärjestelmä, ei romanisaation oikeinkirjoituskaan ole varsinaisesti klingonin oikeinkirjoitusta. Romanisaation oikeinkirjoitus ei ole vakiintunut, eikä tämän liitteen ohjeita pidä ajatella tiukkoina sääntöinä, vaan pikemminkin yleisinä käytäntöinä.
 
 \section{Isot ja pienet kirjaimet}
 
@@ -1581,7 +1653,7 @@ Kirjaimet \textbf{Q} ja \textbf{q} ovat erilliset kirjaimet ja ne äännetään 
 Kaikki muut kirjaimet kirjoitetaan pienellä.
 \footnote{
     Syy tälle käytännölle on, että romanisaatiossa halutaan huomioida eri murteiden erilaiset ääntämisasut, minkä vuoksi on tarvittu enemmän merkkejä kuin mitä englannin aakkostossa on.
-    Siksi isoja ja pieniä aakkosia käytetään eri äänteiden merkitsemiseen, esimerkiksi \textbf{h} /h/ ja \textbf{H} /χ/.
+    Siksi isoja ja pieniä aakkosia käytetään eri äänteiden merkitsemiseen, esimerkiksi \textbf{h} /h/ ja \textbf{H} /x/.
     Standardiklingonissa ei kuitenkaan käytetä kaikkia näitä äänteitä, mikä selittää romanisaation näennäisen epäjohdonmukaisuuden.
 }
 
@@ -1653,11 +1725,6 @@ poikkeus:\\*[1em]
     Holtej & kielitieteilijä \\
     tamlertej & kemisti \\
     'otlhtej & kvanttitieteilijä \\
-\end{tabular}
-
-poikkeus:\\*[1em]
-\begin{tabular}{Bl Il}
-    mI' tej & matemaatikko \\
 \end{tabular}
 
 5. eräät adverbit\\*[1em]
@@ -1779,6 +1846,49 @@ Jos kirjain on ''tavallinen'', se siirtyy usein suoraan: \strule{a}{a}, \strule{
 Joskus vokaalit katoavat tai muuttuvat heittomerkiksi: \strule{a}{'}, \strule{I}{$\varnothing$} jne. Tämä johtuu tietysti siitä, että muunnos on tapahtunut oikeasti toiseen suuntaan ja sanoihin on pitänyt lisätä vokaaleja, jotta tavut sopisivat klingonin fonotaktisiin sääntöihin.
 
 Star Trek -kirjoittajat rakastavat heittomerkkejä, joita lisätään usein erityisesti ensimmäisen kirjaimen jälkeen: \textit{D'Ghor}, \textit{L'Rell}, \textit{G'trok}, \textit{K'Ehleyr}, jne. Jos heittomerkki on kahden konsonantin välissä, ''alkuperäisessä'' nimessä on usein vokaali tässä kohtaa. Muissa tapauksissa heittomerkillä ei ole yleensä mitään vastinetta ''alkuperäisessä'' nimessä. Sanan alussa olevan konsonantin jälkeen ei voi tulla \textbf{'}-merkkiä, sillä kaksi konsonanttia ei voi esiintyä vierekkäin tavun alussa.
+
+\chapter{Epäsäännöllisiä sanoja}
+
+\section{Epäsäännöllisiä monikkoja}
+\index{monikko}
+
+Joidenkin substantiivien monikko on epäsäännöllinen.
+Tällöin niistä käytetään yksikön verbietuliitteitä sekä pronomineja \textbf{'oH} ja \textbf{ghaH}.
+\index[sanat]{'oH}
+\index[sanat]{ghaH}
+
+\begin{tabular}{Bl Il Bl Il}
+    DoS & kohde & ray' & kohteet \\
+    jengva' & lautanen & ngop & lautaset \\
+    mang & sotilas & negh & sotilaat \\
+    peng & torpedo & cha & torpedot \\
+    mang & sotilas & negh & sotilaat \\
+    qempa' & esivanhempi & no' & esivanhemmat \\
+    rI'gheS & kimmotin & begh & kimmottimet \\
+    Sup & resurssi & jo & resurssit \\
+    tu'mI' & sukka & paSlogh & sukat \\
+    vIj & työntömoottori & chuyDaH & työntömoottorit \\
+    'angwIl' & (eräs eläin) & qoSqa'rIy & (monikko) \\
+\end{tabular}
+
+Sanan \textbf{Duj} \textit{vaisto} monikko on myös \textbf{Duj}, mutta sen kanssa käytetään monikollisia verbietuliitteitä ja pronomineja.
+
+\section{Epäsäännöllisiä kausatiiviverbejä}
+\index{kausatiivijohdin}
+\index[sanat]{-moH}
+
+Joidenkin verbien kanssa ei käytetä kausatiivijohdinta \textbf{-moH}.
+Kun verbiä käytetään transitiivisesti, sen merkitys on kausatiivinen.
+
+\begin{tabular}{Bl Il Il}
+    \textmd{Verbi} & \textup{Intransitiivinen merkitys} & \textup{Transitiivinen merkitys}\\
+    \hline
+    meQ & palaa & polttaa \\
+    pegh & olla salainen & salata \\
+    So' & piiloutua & piilottaa \\
+    So'Ha' & paljastaa itsensä & paljastaa jokin \\
+    tagh & alkaa & aloittaa \\
+\end{tabular}
 
 \chapter{Yleisiä adverbeja}
 \label{apx:adverbit}
@@ -1941,6 +2051,25 @@ Perustuu Klingonska Akademienin listaan adverbeistä.\footnote{\url{http://kling
     rom & kongruenssi \\
 \end{tabular}
 
+\chapter{Tervehdyksiä ja kohteliaisuuksia}
+
+Sanotaan, että klingonit eivät harrasta tervehtimistä ja kohteliaisuuksia, vaan menevät suoraan asiaan. Suosituin klingontervehdys on \textbf{nuqneH?} \textit{Mitä haluat?} tai \textit{Mitä asiaa?}. Sitä käytetään seuraavasti: Jos menet jonkun luokse, älä sano mitään. Jos joku tulee luoksesi, kysy mitä hän haluaa, \textbf{nuqneH}. Jos joku kysyy sinulta \textbf{nuqneH}, kerro mitä asiaa sinulla on.
+
+Klingoninpuhujan ei tietenkään tarvitse esittää klingonia jatkuvasti, joten on tarve tervehdyksille ja kohteliaisuuksille on olemassa. Klingonissa on monia sanoja, joita voi käyttää samaan tapaan kuin suomen tervehdyksiä.
+
+Alla on ilmauksia joita voi käyttää tervehdyksinä ja kohteliaisuuksina. Verbit on annettu yksikkömuotoisina ja ne pitää muuttaa monikkoon jos tervehditään useita henkilöitä.
+
+\begin{tabular}{l l}
+    nuqneH? & Mitä haluat? \\
+    qavan. & Tervehdin sinua. \\
+    qaleghneS. & Kunnia nähdä sinut. \\
+    batlh naDev (bIDab). & Tervetuloa tänne (asumaan). \\
+    maj po. & Hyvää huomenta. \\
+    maj ram. & Hyvää yötä. \\
+    qatlho'. & Kiitän sinua. \\
+    majQa'. & Hyvin tehty. \\
+\end{tabular}
+
 \chapter{Kirosanoja}
 
 \section{Huudahduksia}
@@ -1985,6 +2114,7 @@ Voimasanan \textbf{jay'} on aina oltava lauseen lopussa viimeisenä sanana. Se v
 \end{tabular}
 
 \chapter{rur-ilmauksia}
+\index[sanat]{rur}
 
 Verbiä \textbf{rur} \textit{muistuttaa} käytetään usein samalla tavalla kuin suomen sanaa \textit{kuin}.
 
@@ -2037,28 +2167,77 @@ Lista on koottu boQwI'-sanakirjan esimerkeistä.\footnote{\url{https://github.co
 \chapter{Perinteinen klingonin kielioppi}
 \label{apx:perinne}
 
-Marc Okrand käyttää kielioppi- ja sanakirjateoksessaan \textit{The Klingon Dictionary} erilaista järjestelmää sanojen ja päätteiden luokitteluun kuin mitä tässä kirjassa on käytetty. Järjestelmä perustuu väitetysti ''klingonien oman kielitieteen'' käsitteistöön.
+Marc Okrand käyttää kielioppi- ja sanakirjateoksessaan \textit{The Klingon Dictionary} erilaista järjestelmää sanojen ja päätteiden luokitteluun kuin mitä tässä kirjassa on käytetty. Järjestelmä perustuu väitetysti ''klingonien oman kielitieteen'' käsitteistöön. Koska se on hyvin yleisessä käytössä, on se syytä opetella. Se eroaa tässä kirjassa käytetystä järjestelmästä lähinnä siten, että se on suuripiirteisempi ja epätarkempi.
 
 Perinteisesti klingonin sanat jaetaan kolmeen sanaluokkaan: substantiiveihin (\textit{DIpmey}), verbeihin (\textit{wotmey}) ja muihin sanoihin (\textit{chuvmey}). Tämän lisäksi klingonin substantiiviliitteet (\textit{DIp mojaqmey}) on jaettu viiteen luokkaan ja verbipäätteet (\textit{wot mojaqmey}) kymmeneen luokkaan. Näiden lisäksi kielessä on verbietuliiteitä (\textit{moHaqmey}).
 
-Alla on taulukoitu substantiiviliitteet.
+Alla on järjestetty substantiiviliitteet ja verbipäätteet perinteisen luokittelun mukaisiin ryhmiin.
 
-\begin{tikzpicture}[every node/.style={rectangle, draw=black, fill=white}]
-    \node(l1) [draw, anchor=text, rectangle split,rectangle split parts=3]{
-        \textbf{-'a'}
-        \nodepart{n2}
-        \textbf{-Hom}
-        \nodepart{n3}
-        \textbf{-oy}
+\begin{center}
+    \makebox[0cm]{
+        \begin{tabular}{l l l l l}
+            \hline
+            \multicolumn{1}{|c}{1} & \multicolumn{1}{|c}{2} & \multicolumn{1}{|c}{3} & \multicolumn{1}{|c|}{4} & \multicolumn{1}{c|}{5} \\
+            \hline
+            \multicolumn{1}{|Bc}{-'a'} & \multicolumn{1}{|Bc}{-pu'} & \multicolumn{1}{|Bc}{-na'} & \multicolumn{1}{|Bc|}{-wIj} & \multicolumn{1}{Bc|}{-Daq} \\
+            \hline
+            \multicolumn{1}{|Bc}{-Hom} & \multicolumn{1}{|Bc}{-Du'} & \multicolumn{1}{|Bc}{-Hey} & \multicolumn{1}{|Bc|}{-wI'} & \multicolumn{1}{Bc|}{-vo'} \\
+            \hline
+            \multicolumn{1}{|Bc}{-oy} & \multicolumn{1}{|Bc}{-mey} & \multicolumn{1}{|Bc}{-qoq} & \multicolumn{1}{|Bc|}{-lIj} & \multicolumn{1}{Bc|}{-vaD} \\
+            \cline{1-5}
+            & & & \multicolumn{1}{|Bc|}{-lI'} & \multicolumn{1}{Bc|}{-mo'} \\
+            \cline{4-5}
+            & & & \multicolumn{1}{|Bc|}{-maj} & \multicolumn{1}{Bc|}{-'e'} \\
+            \cline{4-5}
+            & & & \multicolumn{1}{|Bc|}{-ma'} & \\
+            \cline{4-4}
+            & & & \multicolumn{1}{|Bc|}{-raj} & \\
+            \cline{4-4}
+            & & & \multicolumn{1}{|Bc|}{-ra'} & \\
+            \cline{4-4}
+            & & & \multicolumn{1}{|Bc|}{-Daj} & \\
+            \cline{4-4}
+            & & & \multicolumn{1}{|Bc|}{-chaj} & \\
+            \cline{4-4}
+            & & & \multicolumn{1}{|Bc|}{-vam} & \\
+            \cline{4-4}
+            & & & \multicolumn{1}{|Bc|}{-vetlh} & \\
+            \cline{4-4}
+        \end{tabular}
     }
-    \node(l2) [right of=l1, draw, anchor=text, rectangle split,rectangle split parts=3]{
-        \textbf{-qoq}
-        \nodepart{n2}
-        \textbf{-Hey}
-        \nodepart{n3}
-        \textbf{-na'}
+
+    \makebox[0cm]{
+        \begin{tabular}{l l l l l l l l l l}
+            \hline
+            \multicolumn{1}{|c}{1} & \multicolumn{1}{|c|}{2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{|c}{5} & \multicolumn{1}{|c}{6} & \multicolumn{1}{|c|}{7} & \multicolumn{1}{c}{8} & \multicolumn{1}{|c|}{9} & \multicolumn{1}{c|}{lengwI'} \\
+            \hline
+            \multicolumn{1}{|Bc}{-'egh} & \multicolumn{1}{|Bc|}{-nIS} & \multicolumn{1}{Bc|}{-choH} & \multicolumn{1}{Bc}{-moH} & \multicolumn{1}{|Bc}{-lu'} & \multicolumn{1}{|Bc}{-chu'} & \multicolumn{1}{|Bc|}{-pu'} & \multicolumn{1}{Bc}{-neS} & \multicolumn{1}{|Bc|}{-chugh} & \multicolumn{1}{Bc|}{-be'} \\
+            \hline
+            \multicolumn{1}{|Bc}{-chuq} & \multicolumn{1}{|Bc|}{-qang} & \multicolumn{1}{Bc|}{-qa'} & & \multicolumn{1}{|Bc}{-laH} & \multicolumn{1}{|Bc}{-bej} & \multicolumn{1}{|Bc|}{-ta'} & & \multicolumn{1}{|Bc|}{-pa'} & \multicolumn{1}{Bc|}{-Qo'} \\
+            \cline{1-3} \cline{5-7} \cline{9-10}
+            & \multicolumn{1}{|Bc|}{-rup} & & & & \multicolumn{1}{|Bc}{-ba'} & \multicolumn{1}{|Bc|}{-taH} & & \multicolumn{1}{|Bc|}{-DI'} & \multicolumn{1}{Bc|}{-Ha'} \\
+            \cline{2-2} \cline{6-7} \cline{9-10}
+            & \multicolumn{1}{|Bc|}{-beH} & & & & \multicolumn{1}{|Bc}{-law'} & \multicolumn{1}{|Bc|}{-lI'} & & \multicolumn{1}{|Bc|}{-vIS} & \multicolumn{1}{Bc|}{-qu'} \\
+            \cline{2-2} \cline{6-7} \cline{9-10}
+            & \multicolumn{1}{|Bc|}{-vIp} & & & & & & & \multicolumn{1}{|Bc|}{-mo'} & \\
+            \cline{2-2} \cline{9-9}
+            & & & & & & & & \multicolumn{1}{|Bc|}{-meH} & \\
+            \cline{9-9}
+            & & & & & & & & \multicolumn{1}{|Bc|}{-bogh} & \\
+            \cline{9-9}
+            & & & & & & & & \multicolumn{1}{|Bc|}{-'a'} & \\
+            \cline{9-9}
+            & & & & & & & & \multicolumn{1}{|Bc|}{-jaj} & \\
+            \cline{9-9}
+            & & & & & & & & \multicolumn{1}{|Bc|}{-wI'} & \\
+            \cline{9-9}
+            & & & & & & & & \multicolumn{1}{|Bc|}{-ghach} & \\
+            \cline{9-9}
+        \end{tabular}
     }
-\end{tikzpicture}
+\end{center}
+
+Tämän jaottelun etu on, että sanaa rakennettaessa voi valita jokaisesta sarakkeesta joko nolla tai yksi päätettä. Taulukosta näkee helposti päätteiden järjestyksen ja sen, mitä päätteitä ei voi käyttää yhtä aikaa. Selkein heikkous tässä jaottelussa on seikkailijoiden (\textit{lengwI'}) ryhmä, jonka ominaisuudet ovat epäselviä. Monissa kieliopeissa sanotaan, että seikkailijat voivat mennä minkä tahansa päätteiden väliin, mutta tämä ei oikeastaan ole totta muille kuin päätteille \textbf{-qu'} ja \textbf{-be'}. \textbf{-Ha'} voi mennä vain sanan alkuun (eli sen tulisi olla oma ''nollas'' pääteryhmänsä) ja \textbf{-Qo'} voi mennä vain kahdeksannen ja yhdeksännen ryhmän väliin (eli sen tulisi olla oma ryhmänsä 8½). Jostain syystä, ehkä siksi että \textbf{-Qo'} ja \textbf{-Ha'} ovat eräänlaisia kieltomuotoja kuten \textbf{-be'}, ne kuitenkin lasketaan seikkailijoiksi.
 
 \backmatter
 \clearpage
